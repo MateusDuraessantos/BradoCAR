@@ -1,0 +1,1660 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+* {
+  font-family: "Inter", sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+}
+
+:root {
+  --blue_00: #17739E;
+  --blue_01: #007AFF;
+  --blue_02: #060F16;
+  --red: #FF1818;
+  --cinza: #323232;
+  --preto: #121212;
+}
+
+.noise {
+  position: fixed;
+  pointer-events: none;
+  top: 0;
+  left: 0;
+  width: 106vw;
+  height: 106vh;
+  background-image: url('./src/noise.png');
+  z-index: 200;
+  opacity: 0.4;
+}
+
+body {
+  background: var(--blue_02);
+  overflow-x: hidden;
+  width: 100%;
+}
+
+.width {
+  max-width: 1100px;
+  width: calc(100% - 100px);
+  margin: auto;
+}
+
+.button__blue {
+  background: var(--blue_00);
+  transition: .2s;
+  color: #fff;
+  font-size: 16px;
+  border: none;
+  border-radius: 50px;
+  padding: 10px 30px;
+  cursor: pointer;
+  width: max-content;
+  height: 40px;
+  text-align: center;
+  text-wrap: nowrap;
+  white-space: nowrap;
+}
+
+.button__blue:hover {
+  background: var(--blue_01);
+  transition: .2s;
+}
+
+.button__whatsapp {
+  transition: .2s;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: 2px solid #2DB742;
+  border-radius: 14px;
+  background: none;
+  color: white;
+  font-size: 16px;
+  height: 40px;
+  padding: 0 14px;
+  width: max-content;
+  cursor: pointer;
+}
+
+.button__whatsapp img {
+  width: 24px;
+  object-fit: contain;
+}
+
+.button__whatsapp:hover {
+  background: rgba(56, 120, 73, 0.4);
+  transition: .2s;
+}
+
+section, footer {
+  position: relative;
+}
+
+.link__ancor {
+  position: absolute;
+  height: 100px;
+  width: 100%;
+  bottom: 100%;
+}
+
+/* Nav */
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  z-index: 6;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #060f16d1;
+  height: 80px;
+  backdrop-filter: blur(14px);
+  padding: 0 30px;
+  width: 100%;
+  border-radius: 0 0 30px 30px;
+  box-shadow: 4px 3px 20px rgba(0, 0, 0, 0.4);
+}
+
+.nav__options {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.nav__logo {
+  height: 30px;
+  object-fit: contain;
+  margin-right: 20px;
+}
+
+.nav__link {
+  color: #fff;
+  font-size: 16px;
+  transition: .2s;
+}
+
+.nav__link:hover {
+  color: #c2c2c2;
+  transition: .2s;
+}
+
+.nav__cadastrar {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-left: auto;
+}
+
+/* Header */
+
+.banner {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 90vh;
+  background-image: url('./src/maps.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: white;
+  overflow: hidden;
+}
+
+.banner__container {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 730px;
+  backdrop-filter: blur(20px);
+  border-radius: 30px 30px 0 0;
+  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.4));
+  padding: 100px 80px;
+  z-index: 2;
+}
+
+.banner__buttons {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+}
+
+.banner__logo {
+  height: 130px;
+  width: max-content;
+  z-index: 2;
+}
+
+h1 {
+  font-size: 40px;
+}
+
+.banner__column {
+  position: relative;
+  width: 40%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/*  */
+
+.banner__graf--logo {
+  position: absolute;
+  right: -360px;
+  top: -100px;
+  height: 1000px;
+  opacity: 0.2;
+  filter: drop-shadow();
+  z-index: 1;
+}
+
+.banner__grafismo {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 46%;
+  z-index: 2;
+}
+
+.banner_graf-01 {
+  position: absolute;
+  height: 500px;
+  left: 20%;
+  top: 20%;
+  z-index: 2;
+}
+
+.banner__toyota,
+.banner__car-mercedes,
+.banner__car-toyota {
+  position: absolute;
+}
+
+.banner__car-toyota {
+  transform: translate(-150px, -70px);
+  width: 340px;
+  top: 40%;
+  left: 16%;
+  z-index: 1;
+  animation: carro 1.2s;
+}
+
+.banner__toyota {
+  width: 300px;
+  z-index: 3;
+  left: 20%;
+  top: 42%;
+  animation: carro-1 1s;
+}
+
+.banner__car-mercedes {
+  width: 400px;
+  z-index: 4;
+  top: 40%;
+  left: 25%;
+  transform: translate(100px, 70px) scalex(-1);
+  animation: mercedez 0.8s;
+}
+
+@keyframes carro-1 {
+  from {
+    transform: translate(80px, 0);
+  }
+
+  to {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes carro {
+  from {
+    transform: translate(-50px, -70px);
+  }
+
+  to {
+    transform: translate(-150px, -70px);
+  }
+}
+
+@keyframes mercedez {
+  from {
+    transform: translate(200px, 70px) scalex(-1);
+  }
+
+  to {
+    transform: translate(100px, 70px) scalex(-1);
+  }
+}
+
+/* SOBRE */
+
+.sobre {
+  padding: 80px 0;
+  background-image: linear-gradient(140deg, white, #6E7789);
+  width: 100%;
+  overflow: hidden;
+}
+
+.sobre__grid {
+  position: relative;
+  display: grid;
+  width: calc(100% - 200px);
+  grid-template-columns: 330px 2fr;
+  box-shadow: 4px 4px 80px rgba(0, 0, 0, 0.4);
+  border-radius: 30px;
+}
+
+.sobre__column-1 {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  background: black;
+  width: 100%;
+  border-radius: 30px 0 0 30px;
+}
+
+
+.sobre__pin {
+  transform: translatex(-4px);
+  width: calc(100% + 8px);
+  border-radius: 0 0 0 30px;
+}
+
+.sobre__moto {
+  position: absolute;
+  bottom: -30px;
+  margin: auto;
+  width: calc(100% + 260px);
+  z-index: 3;
+}
+
+.sobre__column-2 {
+  background: #fff;
+  border-radius: 0 30px 30px 0;
+  padding: 34px 60px 60px 40px;
+  overflow: hidden;
+}
+
+h2 {
+  font-size: 32px;
+  margin-bottom: 40px;
+}
+
+.sobre__nos {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border-radius: 10px;
+  box-shadow: 4px 4px 140px rgba(0, 0, 0, 0.2);
+  padding: 40px;
+  z-index: 2;
+  background-image: linear-gradient(120deg, white, #c2c2c2);
+}
+
+.sobre__description {
+  position: relative;
+  font-size: 14px;
+}
+
+.sobre__title {
+  font-size: 18px;
+  font-weight: 700;
+  z-index: 1;
+}
+
+.sobre__sombra {
+  position: absolute;
+  top: 160px;
+  left: 200px;
+  width: 798px;
+  height: 856px;
+  transform: rotate(48deg);
+  background-image: linear-gradient(#778a9d, #67737E, rgb(93, 96, 104), #67737E, #7e7f85);
+  filter: blur(40px);
+}
+
+/* SOLUÇÕES */
+
+.solucoes {
+  background-color: black;
+  color: white;
+}
+
+.solucoes__header {
+  padding: 60px 0 80px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+h3 {
+  font-size: 32px;
+}
+
+.solucoes__header p {
+  color: #C7C7C7;
+}
+
+.solucoes__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  width: 100%;
+}
+
+.solucoes__card-1 {
+  display: flex;
+  flex-direction: column;
+}
+
+.solucoes__texts {
+  padding: 20px;
+}
+
+.solucoes__number {
+  font-weight: 300px;
+  font-size: 24px;
+}
+
+.solucoes__title {
+  font-size: 24px;
+  font-weight: 800;
+}
+
+.solucoes__p {
+  font-size: 15px;
+  color: #C7C7C7;
+}
+
+.solucoes__text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+  height: 340px;
+}
+
+.solucoes__img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 30px;
+  transition: .2s;
+}
+
+.solucoes__card-1 {
+  position: relative;
+}
+
+.solucoes__card-2 {
+  position: relative;
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+/* APP */
+
+.background {
+  background-image: linear-gradient(60deg, transparent, #17739e1f);
+}
+
+.app {
+  width: 100%;
+  overflow: hidden;
+}
+
+.app__container {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 40px;
+  color: white;
+  padding: 100px 0;
+}
+
+.app__column-1 {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+h4 {
+  font-size: 90px;
+}
+
+.app__description {
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.app__topics {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: 20px;
+}
+
+.app__title {
+  color: #7b7b7b;
+}
+
+.app__title span {
+  font-weight: 600;
+  font-size: 18px;
+  text-decoration: underline;
+  color: white;
+}
+
+.app__text {
+  font-size: 16px;
+  font-weight: 200;
+}
+
+.app__store {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.app__store p {
+  font-size: 22px;
+}
+
+.app__store img {
+  height: 44px;
+}
+
+.app__images {
+  display: flex;
+  gap: 20px;
+}
+
+.app__cellphone {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.app__cellphone img {
+  position: absolute;
+  width: calc(100% + 100px);
+  margin: auto;
+  transform: translatex(40px);
+}
+
+/* CARROSSEL */
+
+.carousel {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  height: 800px;
+  width: 100%;
+  overflow: hidden;
+  background-image: linear-gradient(0deg, #1a5e7e, transparent);
+}
+
+.carousel * {
+  transition: .2s;
+}
+
+.carousel__iframe {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  outline: 2px solid #2c2c2c;
+  border: 2px solid black;
+  border-radius: 30px;
+  height: 642px;
+  width: 300px;
+  box-shadow: 3px 3px 30px rgba(0, 0, 0, 0.4);
+  z-index: 3;
+}
+
+.carousel__iframe::before {
+  /* Camera */
+  content: '';
+  position: absolute;
+  margin: auto;
+  height: 22px;
+  background: rgb(32, 32, 32);
+  width: 100px;
+  border-radius: 0 0 10px 10px;
+  border-color: #a4a4a4;
+  border-width: 0 1px 1px 0;
+  border-style: solid;
+  z-index: 2;
+}
+
+.carousel__iframe::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.2), transparent, transparent);
+  z-index: 1;
+  border-radius: 30px;
+}
+
+.carousel__container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 22px;
+  width: calc(100% - 300px);
+  max-width: 1028px;
+  height: 100%;
+  user-select: none;
+}
+
+[img_default] {
+  width: 200px;
+  height: 438px;
+  position: absolute;
+  object-fit: cover;
+  border-radius: 30px;
+  width: 200px;
+  height: 438px;
+  transform: translatex(-50%);
+}
+
+[frame_size="img_b"] {
+  width: 240px;
+  height: 542px;
+  z-index: 1;
+}
+
+[frame_size="img_c"] {
+  width: 296px;
+  height: 638px;
+  border-radius: 26px;
+  z-index: 2;
+}
+
+.carousel__buttons {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 450px;
+  border-radius: 30px;
+  height: 100%;
+}
+
+.carousel__button--left,
+.carousel__button--right {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  font-size: 60px;
+  border: none;
+  font-weight: 200;
+  color: white;
+  z-index: 3;
+  transition: .2s;
+  cursor: pointer;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  transition: .2s;
+  background: rgba(0, 0, 0, 0.6);
+  background-image: linear-gradient(var(--blue_00), #102c55);
+  z-index: 4;
+}
+
+.carousel__button--left img,
+.carousel__button--right img {
+  width: 30px;
+  height: 30px;
+}
+
+.carousel__button--left {
+  left: 0;
+}
+
+.carousel__button--right {
+  right: 0;
+}
+
+.carousel__button--left:hover,
+.carousel__button--right:hover {
+  backdrop-filter: blur(10px);
+  transition: .2s;
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
+}
+
+/* PLAIN */
+
+.plain {
+  background: white;
+  padding: 100px 0;
+}
+
+.plain .width {
+  width: calc(100% - 300px);
+  margin-bottom: 40px;
+  max-width: initial;
+}
+
+h5 {
+  font-size: 52px;
+  font-weight: 700;
+}
+
+.plain__container {
+  position: relative;
+  display: flex;
+  box-shadow: 3px 3px 30px rgba(0, 0, 0, 0.2);
+  padding: 60px;
+  width: calc(100% - 200px);
+  border-radius: 12px;
+  overflow: hidden;
+  margin: auto;
+}
+
+.plain__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 10px;
+  padding-right: 330px;
+}
+
+.plain__price {
+  display: flex;
+  align-items: center;
+}
+
+.plain__price--money {
+  font-size: 16px;
+}
+
+.plain__price--value {
+  font-size: 42px;
+  font-weight: 800;
+}
+
+.plain__options li {
+  font-size: 15px;
+}
+
+.plain__cards {
+  position: relative;
+  border-radius: 30px;
+  overflow: hidden;
+  box-shadow: 3px 3px 30px rgba(0, 0, 0, 0.2);
+}
+
+.plain__container--card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  height: 360px;
+  padding: 18px;
+}
+
+.plain__button--blue {
+  position: absolute;
+  z-index: 4;
+  background: var(--blue_00);
+  color: white;
+  border-radius: 50px;
+  font-size: 14px;
+  border: none;
+  padding: 4px 10px;
+  bottom: 20px;
+  width: calc(100% - 30px);
+}
+
+.plain ul {
+  margin-left: 20px;
+}
+
+.plain__header {
+  background: var(--blue_00);
+  color: white;
+  font-size: 24px;
+  padding: 16px 20px;
+  border-radius: 30px 30px 0 0;
+}
+
+.plain__car {
+  position: absolute;
+  right: -50px;
+  width: 400px;
+  bottom: -160px;
+}
+
+/* CONTATO */
+
+.contato {
+  overflow: hidden;
+}
+
+.contato__container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  padding-top: 100px;
+}
+
+.contanto__relatos {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+}
+
+.contato__card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background: var(--blue_00);
+  padding: 16px;
+  border: 14px;
+  color: white;
+  font-size: 14px;
+  border-radius: 10px;
+  gap: 12px;
+}
+
+.contato__card::before {
+  position: absolute;
+  content: '"';
+  top: -20px;
+  left: 60px;
+  display: flex;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--cinza);
+  line-height: 56px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: white;
+  font-size: 34px;
+}
+
+.contato__p {
+  font-weight: 200;
+}
+
+.contato__person {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  width: 100%;
+  font-size: 14px;
+}
+
+.contato__person img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.contato__name {
+  display: flex;
+  flex-direction: column;
+}
+
+.contato__images {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 700px;
+  height: 100%;
+}
+
+h6 {
+  font-size: 38px;
+  font-weight: 800;
+}
+
+.contato__truck,
+.contato__fiesta,
+.contato__toyota {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+.contato__truck {
+  z-index: 2;
+  right: -200px;
+  height: 600px;
+  animation: truck 1.4s;
+}
+
+.contato__fiesta {
+  height: 275px;
+  right: 418px;
+  bottom: 70px;
+  animation: fiesta 1.4s;
+}
+
+.contato__toyota {
+  z-index: 3;
+  height: 381px;
+  bottom: -64px;
+  right: -100px;
+  animation: toyota 1.6s;
+}
+
+@keyframes truck {
+  from {
+    transform: translate(140px, 0);
+  }
+
+  to {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes fiesta {
+  from {
+    transform: translate(200px, 0);
+  }
+
+  to {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes toyota {
+  from {
+    transform: translate(140px, 0);
+  }
+
+  to {
+    transform: translate(0, 0);
+  }
+}
+
+.contato__truck {
+  position: absolute;
+}
+
+.contato__message {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  z-index: 2;
+  margin-left: 20px;
+  padding: 10px;
+  text-align: center;
+}
+
+.contato__message p {
+  font-size: 20px;
+}
+
+.contato__arrow {
+  font-size: 26px;
+}
+
+.contato__cars {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 600px;
+  width: 100%;
+}
+
+/* FOOTER */
+
+footer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 100px;
+  width: 100%;
+  color: white;
+  background-image: linear-gradient(166deg, transparent, transparent, rgba(217, 217, 217, 0.4));
+  text-shadow: 8px 8px 10px rgba(0, 0, 0, 0.3);
+}
+
+.footer__container {
+  position: relative;
+  background-image: linear-gradient(120deg, #696969, #2F2F2F);
+  width: 100%;
+  max-width: 1000px;
+  border-radius: 30px 30px 0 0;
+  padding: 60px 100px;
+  bottom: 0;
+  overflow: hidden;
+  box-shadow: 24px 24px 34px rgb(11 20 27 / 40%);
+}
+
+.footer__grid {
+  display: grid;
+  grid-template-columns: 1fr 140px 1fr;
+  gap: 40px;
+}
+
+.footer__column-1 {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.footer__column-1 img {
+  height: 50px;
+  width: max-content;
+}
+
+form {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background: white;
+  background-image: linear-gradient(120deg, white, #9c9c9c);
+  padding: 20px;
+  border-radius: 10px;
+  width: 340px;
+  box-shadow: 15px 18px 26px rgba(0, 0, 0, 0.2);
+}
+
+form img {
+  height: 40px;
+  width: max-content;
+  margin-bottom: 20px;
+}
+
+input[type='text'],
+textarea {
+  background: var(--cinza);
+  color: white;
+  font-size: 14px;
+  font-weight: 300;
+  padding: 10px 14px;
+  border: 2px solid transparent;
+  border-radius: 10px;
+  transition: .3s;
+  outline: 2px solid transparent;
+}
+
+input[type='text']::placeholder,
+textarea::placeholder {
+  color: white;
+  transition: .3s;
+}
+
+input[type='text']:focus::placeholder,
+textarea:focus::placeholder {
+  color: var(--blue_00);
+  transition: .3s;
+}
+
+input[type='text']:hover,
+textarea:hover {
+  border: 2px solid var(--blue_00);
+  outline: 2px solid var(--cinza);
+  transition: .3s;
+}
+
+input[type='text'] {
+  height: 40px;
+}
+
+textarea {
+  height: 140px;
+}
+
+input[type='submit'] {
+  background: var(--blue_00);
+  color: white;
+  font-size: 16px;
+  width: 100%;
+}
+
+.footer__sombra {
+  position: absolute;
+  top: 146px;
+  left: 83px;
+  width: 608px;
+  height: 456px;
+  transform: rotate(48deg);
+  background-image: linear-gradient(94deg, rgb(34 34 34), #3b3b3b);
+  filter: blur(40px);
+}
+
+.footer__rodape {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 60px;
+  padding: 0 40px;
+  background: black;
+  color: white;
+  font-size: 14px;
+}
+
+.footer__forms {
+  position: relative;
+}
+
+.footer__column-2 {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.footer__title {
+  font-size: 20px;
+}
+
+.footer__p {
+  font-size: 18px;
+}
+
+.footer__texts {
+  line-height: 24px;
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.footer__store {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.footer__redes {
+  color: white;
+  text-decoration: underline;
+  font-size: 16px;
+  transition: .2s;
+}
+
+.footer__redes:hover {
+  color: #c2c2c2;
+  transition: .2s;
+}
+
+/* Responsividade */
+
+
+.close__aside {
+  display: none;
+  color: white;
+  position: absolute;
+  right: 55px;
+  top: 10px;
+  font-size: 30px;
+  padding: 10px;
+  background: none;
+  border: none;
+  transition: .2s;
+  cursor: pointer;
+  z-index: 2;
+  text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.8);
+}
+
+.close__aside:hover {
+  color: gray;
+  transition: .2s;
+}
+
+.nav__hamburguer {
+  display: none;
+  width: 30px;
+  transition: .2s;
+  cursor: pointer;
+  margin-left: 16px;
+}
+
+.nav__hamburguer:hover {
+  opacity: 0.8;
+  transition: .2s;
+}
+
+@media screen and (max-width: 1200px) {
+  .width {
+    width: calc(100% - 50px);
+  }
+
+  /* Header */
+
+  .banner__column {
+    width: 100%;
+  }
+
+  .banner__grafismo, .banner__container {
+    position: relative;
+  }
+
+  .banner__grafismo {
+    width: 100%;
+    height: 280px;
+  }
+  
+  .banner_graf-01 {
+    height: 400px;
+    left: 100px;
+    z-index: 2;
+  }
+  
+  .banner__container, .banner {
+    height: max-content;
+  }
+
+  .banner__container {
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 60px;
+  }
+
+  .banner__logo {
+    height: 60px;
+  }
+
+  .banner__column {
+    gap: 20px;
+  }
+
+  .banner {
+    padding-top: 140px;
+  }
+
+  /* APP */
+
+  .app__container {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  
+  .app__cellphone img {
+    position: relative;
+    width: calc(100% - 50px);
+    height: 500px;
+    transform: none;
+  }
+
+  .app__store {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .app__images {
+    margin: auto;
+  }
+
+  /* PLANOS */
+
+  .plain__grid {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+  }
+  
+  .plain__container {
+    flex-direction: column;
+    width: calc(100% - 50px);
+  }
+
+  .plain__container--card {
+    padding: 18px 18px 68px 18px;
+    height: max-content;
+  }
+
+  .plain__car {
+    object-fit: contain;
+    top: 20px;
+    bottom: initial;
+    right: initial;
+    transform: translatex(76px);
+    margin: auto;
+  }
+
+  .plain__car--response {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    height: 300px;
+  }
+
+  /* Sobre */
+
+  .sobre__grid {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .sobre__column-2 {
+    border-radius: 30px 30px 0 0;
+    padding: 30px;
+  }
+
+  .sobre__column-1 {
+    border-radius: 0 0 30px 30px
+  }
+
+  .sobre__pin {
+    width: 80%;
+  }
+  
+  .sobre__moto {
+    width: calc(76% + 260px);
+  }
+
+  h2 {
+    margin-bottom: 20px;
+  }
+
+  /* Soluções */
+
+  .solucoes__grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  .nav__container {
+    width: 100%;
+  }
+
+  /* Contato */
+
+  .contanto__relatos {
+    display: flex;
+    overflow: hidden;
+    width: calc(100% - 20px);
+    padding-top: 20px;
+    gap: 0;
+  }
+
+  .contato__card {
+    animation: 15s comentarios infinite;
+    min-width: 100%;
+  }
+
+  @keyframes comentarios {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(0); }
+    30% { transform: translateX(-100%); }
+    60% { transform: translateX(-100%); }
+    65% { transform: translateX(-200%); }
+    92% { transform: translateX(-200%); }
+    100% { transform: translateX(0); }
+  }
+
+  .contato__images {
+    position: relative;
+  }
+
+  .contato__cars {
+    flex-direction: column;
+  }
+
+  /* Footer */
+  
+  .footer__grid {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer__store {
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+
+  .nav__options--response, .nav__cadastrar {
+    display: none;
+  }
+
+  .nav__responsive--overlay, .nav__responsive--overlay * {
+    transition: .2s;
+  }
+
+  .nav__responsive .nav__responsive--overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 104vw;
+    background: rgba(0, 0, 0, 0.7);
+    height: 104vh;
+    z-index: 2;
+  }
+
+  .nav__responsive .nav__options {
+    position: absolute;
+    top: 0;
+    left: -10px;
+    display: flex;
+    flex-direction: column;
+    background-image: linear-gradient(#007AFF, #032951);
+    width: 300px;
+    height: 100vh;
+    padding-top: 20px;
+  }
+
+  .nav__responsive .close__aside, .nav__hamburguer { 
+    display: block;
+  }
+
+  .nav__responsive .nav__options {
+    gap: 0;
+  }
+
+  .nav__responsive .nav__options a {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 16px 30px;
+    text-align: start;
+  }
+  
+  .nav__responsive .nav__options a:hover {
+    background: rgba(0, 0, 0, 0.3);
+    transition: .2s;
+  }
+
+  /* Footer */
+  
+  .footer__rodape {
+    flex-direction: column;
+    gap: 20px;
+    padding: 40px;
+    text-align: center;
+    height: max-content;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .solucoes__grid {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .solucoes__card-2 {
+    flex-direction: column;
+  }
+  .solucoes__text {
+    height: 240px;
+  }
+
+  .solucoes__img {
+    height: 300px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+
+  .width {
+    width: calc(100% - 20px);
+  }
+
+  p, .button__blue, .button__whatsapp {
+    font-size: 14px;
+  }
+
+  .button__blue, .button__whatsapp {
+    padding: 10px 20px;
+    width: 100%;
+  }
+
+  /* BANNER */
+
+  .banner__container {
+    padding: 20px;
+  }
+
+  .banner__logo {
+    height: 40px;
+  }
+
+  h1 {
+    font-size: 30px;
+  }
+
+  .banner__car-toyota {
+    width: 242px;
+    left: 40%;
+  }
+
+  .banner__toyota {
+    width: 220px;
+    top: 35%;
+  }
+
+  .banner__car-mercedes {
+    width: 300px;
+    top: 27%;
+    left: 10%;
+  }
+
+  .banner_graf-01 {
+    height: 300px;
+  }
+
+  .sobre__column-2 {
+    padding: 20px;
+  }
+
+  .sobre__nos {
+    padding: 20px;
+  }
+
+  /* SOBRE */
+
+  .sobre {
+    padding: 30px 0;
+  }
+
+  /* SOLUÇÕES */
+
+  .solucoes__img {
+    height: 200px;
+  }
+
+  .solucoes__text--response {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  /* APP */
+
+  h4 {
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 24px;
+  }
+
+  /* CARROSSEL */
+
+  .carousel__buttons {
+    width: calc(100% - 20px);
+  }
+
+  /* PLAIN */
+
+  .plain__container {
+    width: calc(100% - 20px);
+    padding: 20px;
+  }
+
+  h5 {
+    font-size: 44px;
+  }
+
+  .plain__h5--response {
+    width: 100% !important;
+    padding: 0 20px;
+  }
+  
+  .plain {
+    padding: 30px 0 50px 0;
+  }
+
+  /* CONTATO */
+
+  .contato__truck {
+    right: 84px;
+    height: 362px;
+  }
+
+  .contato__toyota {
+    height: 180px;
+    bottom: 1px;
+    right: 243px;
+  }
+  
+  .contato__fiesta {
+    height: 140px;
+    right: 472px;
+    bottom: 55px;
+  }
+
+  h6 {
+    font-size: 30px;
+  }
+
+  .contato__message p {
+    font-size: 16px;
+  }
+
+  .contato__arrow {
+    font-size: 22px;
+  }
+
+  /* FOOTER */
+
+  .footer__rodape p {
+    font-size: 12px;
+    font-weight: 200px;
+  }
+
+  .footer__rodape {
+    padding: 20px 10px;
+  }
+
+  .footer__column-2--response {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .footer__redes--title {
+    text-wrap: nowrap;
+    white-space: nowrap;
+  }
+
+  .footer__column-2 {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    flex-direction: initial;
+  }
+
+  .footer__container {
+    padding: 60px 10px;
+  } 
+
+  .footer__forms {
+    width: 100%;
+  }
+
+  form {
+    width: calc(100% - 20px);
+    margin: auto;
+  }
+
+  .footer__redes--title {
+    font-size: 16px;
+  }
+
+}
