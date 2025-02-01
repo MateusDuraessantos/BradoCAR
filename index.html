@@ -48,10 +48,12 @@
     <div class="banner__container width">
       <div class="banner__grafismo">
         <img class="banner_graf-01" src="src/graf_01.svg" alt="">
-        <img class="banner__car banner__car-toyota" src="src/carros/toyota.png" alt="">
-        <img class="banner__car banner__toyota" src="src/carros/car1.png" alt="">
-        <img class="banner__car banner__car-mercedes" src="src/carros/mercedes.png" alt="">
-        <img class="banner__car banner__cg" src="src/carros/cg-150.png" alt="">
+        <div class="banner__container--car">
+          <img class="banner__car banner__car-toyota" src="src/carros/toyota-banner.png" alt="">
+          <img class="banner__car banner__toyota" src="src/carros/car1.png" alt="">
+          <img class="banner__car banner__car-mercedes" src="src/carros/mercedes.png" alt="">
+          <img class="banner__car banner__cg" src="src/carros/cg-150.png" alt="">
+        </div>
       </div>
 
       <div class="banner__column">
@@ -182,6 +184,7 @@
                 </div>
               </div>
             </div>
+
             <div class="phone">
               <div class="phone__animation">
                 <img class="phone__pin phone__pin--1" src="./src/app/pin-1.svg" alt="">
@@ -553,6 +556,8 @@ nav {
 }
 
 .banner__container {
+  display: grid;
+  grid-template-columns: 1fr max-content;
   position: absolute;
   bottom: 0;
   height: 730px;
@@ -611,6 +616,7 @@ h1 {
   right: -50px;
   height: 100%;
   width: 650px;
+  /* background: rgba(255, 0, 0, 0.4); */
   z-index: 2;
 }
 
@@ -624,30 +630,34 @@ h1 {
 
 .banner__car {
   position: absolute;
-  margin-left: 70px;
+  left: 70px;
+  object-fit: contain;
+  width: 400px;
+}
+
+.banner__container--car {
+  position: relative;
+  margin-top: 223px;
 }
 
 .banner__car-toyota {
-  width: 340px;
-  top: 223px;
-  left: -114px;
+  top: 0;
+  left: -76px;
   z-index: 1;
   animation: car__animation 6s infinite;
 }
 
 .banner__toyota {
-  width: 300px;
-  z-index: 3;
   left: 73px;
-  top: 308px;
-  animation: car__animation 6s infinite;
+  top: 85px;
+  z-index: 3;
   animation-delay: .2s;
+  animation: car__animation 6s infinite;
 }
 
 .banner__car-mercedes {
-  width: 400px;
   z-index: 4;
-  top: 366px;
+  top: 143px;
   left: 194px;
   animation: car__animation 6s infinite;
   animation-delay: .4s;
@@ -655,7 +665,7 @@ h1 {
 
 .banner__cg {
   width: 245px;
-  top: 393px;
+  top: 174px;
   left: 356px;
   animation: car__animation 6s infinite;
   animation-delay: .6s;
@@ -1415,21 +1425,21 @@ h6 {
   position: absolute;
   right: 0;
   bottom: 0;
+  animation: contrato__car 10s infinite;
 }
 
 .contato__fiesta {
   height: 275px;
   right: 418px;
   bottom: 70px;
-  animation: contrato__car 10s infinite;
 }
 
 .contato__truck {
   z-index: 2;
   right: -200px;
   height: 600px;
-  animation: contrato__car 10s infinite;
   animation-delay: .2s;
+
 }
 
 .contato__toyota {
@@ -1437,8 +1447,8 @@ h6 {
   height: 381px;
   bottom: -64px;
   right: -100px;
-  animation: contrato__car 10s infinite;
   animation-delay: .4s;
+
 }
 
 @keyframes contrato__car {
@@ -1447,19 +1457,15 @@ h6 {
     transform: translateX(0);
   }
 
-  10% {
+  35% {
     transform: translateX(0);
   }
 
-  35% {
+  50% {
     transform: translateX(-100px);
   }
   
-  74% {
-    transform: translateX(-100px);
-  }
-
-  97% {
+  75% {
     transform: translateX(0);
   }
 
@@ -1731,7 +1737,9 @@ input[type='submit'] {
 
   .banner__grafismo {
     width: 100%;
-    height: 280px;
+    height: 310px;
+    right: 0;
+    margin: 40px 0;
   }
   
   .banner_graf-01 {
@@ -1762,6 +1770,33 @@ input[type='submit'] {
     padding-top: 140px;
   }
 
+  .banner__container--car {
+    margin-top: 0;
+  }
+
+  .banner__car {
+    width: 300px;
+  }
+
+  .banner__car-toyota {
+    left: -48px;
+  }
+
+  .banner__toyota {
+    left: 0;
+  }
+
+  .banner__car-mercedes {
+    left: 90px;
+  }
+
+  .banner__cg {
+    width: 190px;
+    left: 172px;
+    top: 184px;
+  }
+
+
   /* APP */
 
   .app__container {
@@ -1783,6 +1818,43 @@ input[type='submit'] {
 
   .app__images {
     margin: auto;
+  }
+
+  /* phone */
+
+  .phone {
+    width: 100%;
+    transform: translateX(32px);
+    height: 600px;
+  }
+
+  .app__column-1 {
+    min-width: initial;
+    text-align: center;
+  }
+
+  .phone__pin {
+    width: 120px;
+  }
+
+  .phone__pin--1 {
+    top: 280px;
+    left: 81px;
+  
+  }
+  .phone__pin--2 {
+    top: 37px;
+    left: 137px;
+  }
+  
+  .phone--cellphone {
+    width: 300px;
+  }
+
+  .phone__grafismos {
+    width: 560px;
+    left: -121px;
+    top: 41px;
   }
 
   /* PLANOS */
@@ -1884,6 +1956,7 @@ input[type='submit'] {
 
   .contato__images {
     position: relative;
+    left: 48%;
   }
 
   .contato__cars {
@@ -2014,22 +2087,6 @@ input[type='submit'] {
 
   h1 {
     font-size: 30px;
-  }
-
-  .banner__car-toyota {
-    width: 242px;
-    left: 40%;
-  }
-
-  .banner__toyota {
-    width: 220px;
-    top: 35%;
-  }
-
-  .banner__car-mercedes {
-    width: 300px;
-    top: 27%;
-    left: 10%;
   }
 
   .banner_graf-01 {
