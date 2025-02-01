@@ -45,7 +45,7 @@ cardsInfos.forEach(obj => {
     </span>
       <p class="solucoes__p">${obj.description}</p>
     </div>
-    <img class="solucoes__img" src="src/${obj.image}" ./solucoes/alt="">
+    <img class="solucoes__img" width="315" height="400" src="src/${obj.image}" ./solucoes/alt="">
   `
   solucoes.appendChild(cards)
 })
