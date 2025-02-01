@@ -6,28 +6,28 @@ const cardsInfos = [
     200km de reboque
     Chaveiro 24h
     Pane elétrica`,
-    image: 'streets.jpg',
+    image: './solucoes/streets.jpg',
     css: 1
   },
   {
     number: '02',
     title: 'Proteção Veicular',
     description: `A proteção veicular da Bradocar oferece tranquilidade e segurança para seu carro, com cobertura 24h em todo o país. Conte com assistência 24h, guincho, socorro mecânico e muito mais. Proteja seu patrimônio com a Bradocar!`,
-    image: 'truck.jpg',
+    image: './solucoes/truck.jpg',
     css: 2
   },
   {
     number: '03',
     title: 'Rastreamento veicular',
     description: `O rastreamento veicular da Bradocar, tenha total controle e segurança do seu carro. Localize em tempo real, receba alertas e proteja seu veículo contra furtos e roubos. Conte com a Bradocar para manter seu patrimônio protegido.`,
-    image: 'cellphone.jpg',
+    image: './solucoes/cellphone.jpg',
     css: 1
   },
   {
     number: '04',
     title: 'Locação e Venda de Veiculos',
     description: `Na Bradocar, você encontra a melhor opção para locação e venda de veículos. Com uma variedade de modelos e plainos flexíveis, atendemos suas necessidades. Conte com a qualidade e confiança da Bradocar.`,
-    image: 'carkey.jpg',
+    image: './solucoes/carkey.jpg',
     css: 2
   },
 ]
@@ -45,7 +45,7 @@ cardsInfos.forEach(obj => {
     </span>
       <p class="solucoes__p">${obj.description}</p>
     </div>
-    <img class="solucoes__img" src="src/${obj.image}" alt="">
+    <img class="solucoes__img" src="src/${obj.image}" ./solucoes/alt="">
   `
   solucoes.appendChild(cards)
 })

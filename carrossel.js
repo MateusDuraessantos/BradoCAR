@@ -13,7 +13,7 @@ let images = [
     alt: 'Imagem descrição',
   },
   {
-    path: '7.png',
+    path: '3.png',
     alt: 'Imagem descrição',
   },
   {
@@ -33,7 +33,7 @@ let images = [
     alt: 'Imagem descrição',
   },
   {
-    path: '7.png',
+    path: '3.png',
     alt: 'Imagem descrição',
   },
   {
@@ -41,7 +41,6 @@ let images = [
     alt: 'Imagem descrição',
   },
 ]
-
 
 let positions = 0
 const elSlide = document.getElementById('carousel__slide')
