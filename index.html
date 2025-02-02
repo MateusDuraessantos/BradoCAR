@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <meta name="description" content="Mateus Durães dos Santos - 2024.">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
@@ -17,7 +17,7 @@
   <header>
     <nav class="nav__container width" id="nav">
       <div class="nav__options">
-        <img class="nav__logo" width="145" height="30" src="./src/bradocar.svg" alt="Logo BradoCar">
+        <img loading="lazy" class="nav__logo" width="145" height="30" src="./src/bradocar.svg" alt="Logo BradoCar">
 
         <div class="nav__responsive--overlay">
           <button class="close__aside" activeOnClick>✕</button>
@@ -37,27 +37,28 @@
         <a href="" class="nav__link">Cadastrar-se</a>
         <button class="button__blue">Entrar</button>
       </div>
-      <img class="nav__hamburguer" activeOnClick src="./src/hamburguer.svg" alt="">
+      <img loading="lazy" class="nav__hamburguer" activeOnClick src="./src/hamburguer.svg" alt="">
     </nav>
   </header>
 
   <!-- Banner -->
 
   <div class="banner" id="link-inicio">
-    <img class="banner__graf--logo" src="src/logo.svg" alt="">
+    <img loading="lazy" class="banner__background" src="./src/maps.png" alt="">
+    <img loading="lazy" class="banner__graf--logo" src="src/logo.svg" alt="">
     <div class="banner__container width">
       <div class="banner__grafismo">
-        <img class="banner_graf-01" width="672" height="500" src="src/graf_01.svg" alt="">
+        <img loading="lazy" class="banner_graf-01" width="672" height="500" src="src/graf_01.svg" alt="">
         <div class="banner__container--car">
-          <img class="banner__car banner__car-toyota" width="400" height="192" src="src/carros/toyota-banner.png" alt="">
-          <img class="banner__car banner__toyota" width="400" height="192" src="src/carros/car1.png" alt="">
-          <img class="banner__car banner__car-mercedes" width="400" height="192" src="src/carros/mercedes.png" alt="">
-          <img class="banner__car banner__cg" width="245" height="192" src="src/carros/cg-150.png" alt="">
+          <img loading="lazy" class="banner__car banner__car-toyota" width="400" height="192" src="src/carros/toyota-banner.png" alt="">
+          <img loading="lazy" class="banner__car banner__toyota" width="400" height="192" src="src/carros/car1.png" alt="">
+          <img loading="lazy" class="banner__car banner__car-mercedes" width="400" height="192" src="src/carros/mercedes.png" alt="">
+          <img loading="lazy" class="banner__car banner__cg" width="245" height="192" src="src/carros/cg-150.png" alt="">
         </div>
       </div>
 
       <div class="banner__column">
-        <img class="banner__logo" height="130" width="600" src="./src/bradocar.svg" alt="">
+        <img loading="lazy" class="banner__logo" height="130" width="600" src="./src/bradocar.svg" alt="">
         <h1><i>Descomplique sua gestão</i></h1>
 
         <p class="banner__p">
@@ -71,7 +72,7 @@
           </a>
           <button class="button__whatsapp">
             WhatsApp
-            <img src="./src/whatsapp.svg" width="24" height="24" alt="WhatsApp Logo">
+            <img loading="lazy" src="./src/whatsapp.svg" width="24" height="24" alt="WhatsApp Logo">
           </button>
         </div>
       </div>
@@ -87,8 +88,8 @@
       <div class="sobre">
         <div class="sobre__grid width">
           <div class="sobre__column-1">
-            <img class="sobre__pin" width="300" height="600" src="src/pin.svg" alt="">
-            <img class="sobre__moto" width="500" height="300" src="src/carros/moto.webp" alt="">
+            <img loading="lazy" class="sobre__pin" width="300" height="600" src="src/pin.svg" alt="">
+            <img loading="lazy" class="sobre__moto" width="500" height="300" src="src/carros/moto.png" alt="">
           </div>
           <div class="sobre__column-2">
             <h2><i>Sobre nós</i></h2>
@@ -123,6 +124,42 @@
       </div>
     </section>
 
+    <!-- BENEFÍCIOS -->
+    
+    <section class="beneficios">
+
+      <div class="width">
+        <div class="beneficios__card--container">
+          <div class="beneficios__card">
+            <p class="beneficio__p"><strong><i>CONTROLE</i></strong></p>
+            <p class="beneficio__text">Conformidade operacional e regulamentar para uma gestão com mais fluidez.</p>
+          </div>
+          <img class="beneficio__grafismo beneficio__grafismo--2" src="./src/grafismo-2.svg" width="220" height="220" loading="lazy" alt="Grafismo">
+
+        </div>
+        <div class="beneficios__card">
+          <p class="beneficio__p"><strong><i>SEGURANÇA</i></strong></p>
+          <p class="beneficio__text">Melhores condições de segurança e proteção dos funcionários e terceiros</p>
+        </div>
+        <div class="beneficios__card">
+          <p class="beneficio__p"><strong><i>EXPERIÊNCIA</i></strong></p>
+          <p class="beneficio__text">Melhor experiência, atendendo as expectativas dos seus clientes.</p>
+        </div>
+        <div class="beneficios__card">
+          <p class="beneficio__p"><strong><i>PRODUTIVIDADE</i></strong></p>
+          <p class="beneficio__text">Identificação de melhorias, aumentando serviços e entregas.</p>
+        </div>
+        <div class="beneficios__card--container">
+          <div class="beneficios__card">
+            <p class="beneficio__p"><strong><i>CUSTOS</i></strong></p>
+            <p class="beneficio__text">Eliminação de gastos com combustível, manutenção e custos administrativos.</p>
+          </div>
+          <img class="beneficio__grafismo beneficio__grafismo--1" src="./src/grafismo-1.svg" width="220" height="220" loading="lazy" alt="Grafismo">
+        </div>
+      </div>
+
+    </section>
+
     <!-- SOLUÇÕES -->
 
     <section>
@@ -137,92 +174,150 @@
         </div>
         <!-- Add by Javascript -->
         <div class="solucoes__grid" id="solucoes">
+
+          <!-- 01 -->
+
+          <div class="solucoes__card-1">
+            <div class="solucoes__text">
+              <span class="solucoes__text--response">
+                <p class="solucoes__number">01</p>
+                <p class="solucoes__title">Assistência 24 hs</p>
+              </span>
+              <p class="solucoes__p">
+                Os serviços de atendimento ao cliente, chamados de assistência 24 horas, garantem, em caso de pane ou acidente, a prestação de socorro ao veículo segurado e seus ocupantes, como guincho, socorro bateria, entre outros. 200km de reboque Chaveiro 24h Pane elétrica
+              </p>
+            </div>
+            <img loading="lazy" class="solucoes__img" width="315" height="400" src="src/solucoes/streets.jpg" alt="">
+          </div>
+
+          <!-- 02 -->
+
+          <div class="solucoes__card-2">
+            <div class="solucoes__text">
+              <span class="solucoes__text--response">
+                <p class="solucoes__number">02</p>
+                <p class="solucoes__title">Proteção Veicular</p>
+              </span>
+              <p class="solucoes__p">
+                A proteção veicular da Bradocar oferece tranquilidade e segurança para seu carro, com cobertura 24h em todo o país. Conte com assistência 24h, guincho, socorro mecânico e muito mais. Proteja seu patrimônio com a Bradocar!
+              </p>
+            </div>
+            <img loading="lazy" class="solucoes__img" width="315" height="400" src="src/solucoes/truck.jpg" alt="">
+          </div>
+
+          <!-- 03 -->
+
+          <div class="solucoes__card-1">
+            <div class="solucoes__text">
+              <span class="solucoes__text--response">
+                <p class="solucoes__number">03</p>
+                <p class="solucoes__title">Rastreamento veicular</p>
+              </span>
+              <p class="solucoes__p">
+                O rastreamento veicular da Bradocar, tenha total controle e segurança do seu carro. Localize em tempo real, receba alertas e proteja seu veículo contra furtos e roubos. Conte com a Bradocar para manter seu patrimônio protegido.
+              </p>
+            </div>
+            <img loading="lazy" class="solucoes__img" width="315" height="400" src="src/solucoes/cellphone.jpg" alt="">
+          </div>
+
+          <!-- 04 -->
+
+          <div class="solucoes__card-2">
+            <div class="solucoes__text">
+              <span class="solucoes__text--response">
+                <p class="solucoes__number">04</p>
+                <p class="solucoes__title">Locação e Venda de Veiculos</p>
+              </span>
+              <p class="solucoes__p">
+                Na Bradocar, você encontra a melhor opção para locação e venda de veículos. Com uma variedade de modelos e plainos flexíveis, atendemos suas necessidades. Conte com a qualidade e confiança da Bradocar.
+              </p>
+            </div>
+            <img loading="lazy" class="solucoes__img" width="315" height="400" src="src/solucoes/carkey.jpg" alt="">
+          </div>
+        </div>
+
+
+      </div>
+    </section>
+
+    <!-- NOSSO APP -->
+
+    <section>
+      <div class="link__ancor" id="link-app"></div>
+      <div class="app">
+        <div class="app__container width">
+          <div class="app__column-1">
+            <div>
+              <h4><i>Nosso APP</i></h4>
+              <p class="app__description">
+                <i>Descubra como o aplicativo de rastreamento da BradoCar pode revolucionar a forma como você monitora
+                  seus ativos e frotas. Com tecnologia de ponta e uma interface intuitiva, estamos aqui para simplificar
+                  o processo de rastreamento e oferecer total controle na palma da sua mão.</i>
+              </p>
+            </div>
+            <div class="app__topics">
+              <p class="app__title"><strong>1. <span>Tecnologia Avançada ao Seu Alcance</span></strong></p>
+              <p class="app__text">Você terá acesso a tecnologia de ponta que permite o rastreamento preciso e em tempo
+                real de seu veículo.</p>
+            </div>
+            <div class="app__topics">
+              <p class="app__title"><strong>2. <span>Facilidade de Uso e Personalização</span></strong></p>
+              <p class="app__text">
+                Com recursos intuitivos e opções de personalização, você pode adaptar o aplicativo às necessidades
+                específicas do seu negócio.</p>
+            </div>
+            <div class="app__topics">
+              <p class="app__title"><strong>3. <span>Transforme sua Gestão de Ativos com BradoCar</span></strong></p>
+              <p class="app__text">Aposte na praticidade, eficiência e segurança que o aplicativo BradoCar oferece.
+                Simplifique a gestão de ativos e frotas, aumente a produtividade e tenha controle total sobre suas
+                operações.</p>
+            </div>
+            <div class="app__store">
+              <p class=""><strong>Baixe o nosso App</strong></p>
+              <div class="app__images">
+                <img loading="lazy" src="src/app_store.svg" width="141" height="44" alt="App Store">
+                <img loading="lazy" src="src/play_store.svg" width="141" height="44" alt="Google Play">
+              </div>
+            </div>
+          </div>
+
+          <div class="phone">
+            <div class="phone__animation">
+              <img loading="lazy" class="phone__pin phone__pin--1" width="180" height="150" src="./src/app/pin-1.svg" alt="">
+              <img loading="lazy" class="phone__pin phone__pin--2" width="180" height="150" src="./src/app/pin-2.svg" alt="">
+              <img loading="lazy" class="phone__pin phone__pin--3" width="180" height="150" src="./src/app/pin-3.svg" alt="">
+              <img loading="lazy" class="phone--cellphone" width="450" height="800" src="./src/app/cellphone.png" alt="">
+            </div>
+            <img loading="lazy" class="phone__grafismos phone__grafismos--1" width="850" height="800" src="./src/app/grafismos--1.svg" alt="">
+            <img loading="lazy" class="phone__grafismos phone__grafismos--2" width="850" height="800" src="./src/app/grafismos--2.svg" alt="">
+          </div>
         </div>
       </div>
     </section>
 
+    <!-- CARROSSEL -->
 
-    <div class="background">
+    <section class="carousel">
 
-      <!-- NOSSA APP -->
+      <div class="carousel__buttons">
+        <button id="button__l" onclick="slide('left')" class="carousel__button--left">
+          <img loading="lazy" src="./src/arrow-l.svg" width="30" height="30" alt="left / esquerda">
+        </button>
 
-      <section>
-        <div class="link__ancor" id="link-app"></div>
-        <div class="app">
-          <div class="app__container width">
-            <div class="app__column-1">
-              <div>
-                <h4><i>Nosso APP</i></h4>
-                <p class="app__description">
-                  <i>Descubra como o aplicativo de rastreamento da BradoCar pode revolucionar a forma como você monitora
-                    seus ativos e frotas. Com tecnologia de ponta e uma interface intuitiva, estamos aqui para simplificar
-                    o processo de rastreamento e oferecer total controle na palma da sua mão.</i>
-                </p>
-              </div>
-              <div class="app__topics">
-                <p class="app__title"><strong>1. <span>Tecnologia Avançada ao Seu Alcance</span></strong></p>
-                <p class="app__text">Você terá acesso a tecnologia de ponta que permite o rastreamento preciso e em tempo
-                  real de seu veículo.</p>
-              </div>
-              <div class="app__topics">
-                <p class="app__title"><strong>2. <span>Facilidade de Uso e Personalização</span></strong></p>
-                <p class="app__text">
-                  Com recursos intuitivos e opções de personalização, você pode adaptar o aplicativo às necessidades
-                  específicas do seu negócio.</p>
-              </div>
-              <div class="app__topics">
-                <p class="app__title"><strong>3. <span>Transforme sua Gestão de Ativos com BradoCar</span></strong></p>
-                <p class="app__text">Aposte na praticidade, eficiência e segurança que o aplicativo BradoCar oferece.
-                  Simplifique a gestão de ativos e frotas, aumente a produtividade e tenha controle total sobre suas
-                  operações.</p>
-              </div>
-              <div class="app__store">
-                <p class=""><strong>Baixe o nosso App</strong></p>
-                <div class="app__images">
-                  <img src="src/app_store.svg" width="141" height="44" alt="App Store">
-                  <img src="src/play_store.svg" width="141" height="44" alt="Google Play">
-                </div>
-              </div>
-            </div>
+        <button id="button__r" onclick="slide('right')" class="carousel__button--right">
+          <img loading="lazy" src="./src/arrow-r.svg" width="30" height="30" alt="right / direita">
+        </button>
+      </div>
 
-            <div class="phone">
-              <div class="phone__animation">
-                <img class="phone__pin phone__pin--1" width="180" height="150" src="./src/app/pin-1.svg" alt="">
-                <img class="phone__pin phone__pin--2" width="180" height="150" src="./src/app/pin-2.svg" alt="">
-                <img class="phone__pin phone__pin--3" width="180" height="150" src="./src/app/pin-3.svg" alt="">
-                <img class="phone--cellphone" width="450" height="800" src="./src/app/cellphone.png" alt="">
-              </div>
-              <img class="phone__grafismos phone__grafismos--1" width="850" height="800" src="./src/app/grafismos--1.svg" alt="">
-              <img class="phone__grafismos phone__grafismos--2" width="850" height="800" src="./src/app/grafismos--2.svg" alt="">
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- CARROSSEL -->
-
-      <div class="carousel">
-
-        <div class="carousel__buttons">
-          <button id="button__l" onclick="slide('left')" class="carousel__button--left">
-            <img src="./src/arrow-l.svg" width="30" height="30" alt="left / esquerda">
-          </button>
-
-          <button id="button__r" onclick="slide('right')" class="carousel__button--right">
-            <img src="./src/arrow-r.svg" width="30" height="30" alt="right / direita">
-          </button>
-        </div>
-
-        <div class="carousel__iframe">
-          <div class="carrousel__buttons">
-            <img src="./src/bar_navegacao.svg" width="127" height="14" alt="">
-          </div>
-        </div>
-        <div class="carousel__container" id="carousel__slide">
-
+      <div class="carousel__iframe">
+        <div class="carrousel__buttons">
+          <img loading="lazy" src="./src/bar_navegacao.svg" width="127" height="14" alt="">
         </div>
       </div>
-    </div>
+      <div class="carousel__container" id="carousel__slide">
+
+      </div>
+    </section>
 
     <!-- PLANOS -->
 
@@ -234,8 +329,94 @@
         </div>
   
         <div class="plain__container" id="plain__container">
-          <div class="plain__grid" id="plain__grid"></div>
-          <span class="plain__car--response"><img class="plain__car" width="400" height="645" src="src/carros/top.png" alt=""></span>
+
+          <img class="plain__logo" src="./src/bradocar_black.svg" alt="">
+
+          <div class="plain__grid" id="plain__grid">
+
+            <!-- BÁSICO -->
+
+            <div class="plain__cards">
+              <div class="plain__header"><i class="plain__li">BÁSICO</i></div>
+              <div class="plain__container--card">
+                <div class="plain__price">
+                  <span class="plain__price--money">R$</span><p class="plain__price--value"><i>50</i></p><span>,00 <br> /mensal</span></div>
+                <div class="plain__options">
+                  <ul>
+                    <li>Rastreamento pelo app</li>
+                  </ul>
+                </div>
+                <button class="plain__button--blue">Contratar</button>
+              </div>
+            </div>
+
+            <!-- PLUS -->
+
+            <div class="plain__cards">
+              <div class="plain__header"><i class="plain__li">PLUS</i></div>
+              <div class="plain__container--card">
+                <div class="plain__price">
+                  <span class="plain__price--money">R$</span><p class="plain__price--value"><i>65</i></p><span>,00 <br> /mensal</span>
+                </div>
+                <div class="plain__options">
+                  <ul>
+                    <li>Rastreamento pelo app</li>
+                    <li>Monitoramento pela central</li>
+                    <li>Bloqueio pelo app em caso de roubo</li>
+                    <li>2 prontas respostas por ano</li>
+                  </ul>
+                </div>
+                <button class="plain__button--blue">Contratar</button>
+              </div>
+            </div>
+
+            <!-- PRO -->
+
+            <div class="plain__cards">
+              <div class="plain__header"><i class="plain__li">PRO</i></div>
+              <div class="plain__container--card">
+                <div class="plain__price">
+                  <span class="plain__price--money">R$</span><p class="plain__price--value"><i>75</i></p><span>,00 <br> /mensal</span>
+                </div>
+                <div class="plain__options">
+                  <ul>
+                    <li>Rastreamento pelo app</li>
+                    <li>Monitoramento pela central</li>
+                    <li>Bloqueio pelo app em caso de roubo</li>
+                    <li>2 prontas respostas por ano</li>
+                    <li>Cerca virtual com alerta no APP</li>
+                  </ul>
+                </div>
+                <button class="plain__button--blue">Contratar</button>
+              </div>
+            </div>
+            
+            <!-- FULL -->
+
+            <div class="plain__cards">
+              <div class="plain__header">
+                <i class="plain__li">FULL</i>
+                <img src="./src/crown.svg" alt="">
+              </div>
+              <div class="plain__container--card">
+                <div class="plain__price">
+                  <span class="plain__price--money">R$</span><p class="plain__price--value"><i>106</i></p><span>,90 <br> /mensal</span>
+                </div>
+                <div class="plain__options">
+                  <ul>
+                    <li>Rastreamento pelo app</li>
+                    <li>Monitoramento pela central</li>
+                    <li>Bloqueio pelo app em caso de roubo</li>
+                    <li>2 prontas respostas por ano</li>
+                    <li>Cerca virtual com alerta no APP</li>
+                  </ul>
+                </div>
+                <button class="plain__button--blue">Contratar</button>
+              </div>
+            </div>
+
+          </div>
+          <span class="plain__car--response"><img loading="lazy" class="plain__car" width="400" height="645" src="src/carros/top.png" alt=""></span>
         </div>
       </div>  
     </section>
@@ -252,7 +433,7 @@
               de riscos. Além disso, a equipe da BradoCar sempre nos oferece um suporte excepcional.
             </p>
             <div class="contato__person">
-              <img src="src/david.png" width="30" height="30" alt="">
+              <img loading="lazy" src="src/david.png" width="30" height="30" alt="">
               <div class="contato__name">
                 <p><b>David Marcos</b></p>
                 <p>Locadora Rent a Car</p>
@@ -267,7 +448,7 @@
               segurança para nossos veículos. A BradoCar é, sem dúvida, a melhor escolha para soluções de rastreamento."
             </p>
             <div class="contato__person">
-              <img src="src/alessandra.png" width="30" height="30" alt="">
+              <img loading="lazy" src="src/alessandra.png" width="30" height="30" alt="">
               <div class="contato__name">
                 <p><b>Alessandra Moura</b></p>
                 <p>Lider Transportes</p>
@@ -282,7 +463,7 @@
               empresa que precise de soluções de rastreamento eficientes e seguras."
             </p>
             <div class="contato__person">
-              <img src="src/aline.png" width="30" height="30" alt="">
+              <img loading="lazy" src="src/aline.png" width="30" height="30" alt="">
               <div class="contato__name">
                 <p><b>Aline Silva</b></p>
                 <p>Gerente de Frotas</p>
@@ -293,9 +474,9 @@
 
         <div class="contato__cars">
           <div class="contato__images">
-            <img class="contrato__car contato__fiesta" width="414" height="275" src="src/carros/fiesta.png" alt="">
-            <img class="contrato__car contato__truck" width="900" height="600" src="src/carros/truck.png" alt="Caminhão">
-            <img class="contrato__car contato__toyota" width="500" height="400" src="src/carros/toyota.png" alt="">
+            <img loading="lazy" class="contrato__car contato__fiesta" width="414" height="275" src="src/carros/fiesta.png" alt="">
+            <img loading="lazy" class="contrato__car contato__truck" width="900" height="600" src="src/carros/truck.png" alt="Caminhão">
+            <img loading="lazy" class="contrato__car contato__toyota" width="500" height="400" src="src/carros/toyota-banner.png" alt="">
           </div>
 
           <div class="contato__message">
@@ -318,8 +499,8 @@
           <p class="footer__title"><strong>Baixe o nosso App</strong></p>
 
           <div class="footer__store">
-            <img src="./src/app_store.svg" width="160" height="50" alt="App Store">
-            <img src="./src/play_store.svg" width="160" height="50" alt="Google Play">
+            <img loading="lazy" src="./src/app_store.svg" width="160" height="50" alt="App Store">
+            <img loading="lazy" src="./src/play_store.svg" width="160" height="50" alt="Google Play">
           </div>
 
           <p class="footer__texts">
@@ -339,7 +520,7 @@
         <div class="footer__forms">
           <div class="footer__sombra"></div>
           <form action="">
-            <img src="./src/bradocar_black.svg" width="195" height="40" alt="BradoCAR logo">
+            <img loading="lazy" src="./src/bradocar_black.svg" width="195" height="40" alt="BradoCAR logo">
             <input placeholder="Nome" type="text">
             <input placeholder="Email" type="text">
             <textarea placeholder="Mensagem"></textarea>
@@ -356,8 +537,7 @@
   </footer>
 
   <script src="carrossel.js"></script>
-  <script src="createCards.js"></script>
-  <script src="planos.js"></script>
+
   <script>
 
     const nav = document.querySelector('nav')
@@ -373,1857 +553,4 @@
   </script>
   
 </body>
-
-
-<style>
-  @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
-
-* {
-  font-family: "Inter", sans-serif;
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-a {
-  text-decoration: none;
-}
-
-:root {
-  --blue_00: #17739E;
-  --blue_01: #007AFF;
-  --blue_02: #060F16;
-  --red: #FF1818;
-  --cinza: #323232;
-  --preto: #121212;
-}
-
-.noise {
-  position: fixed;
-  pointer-events: none;
-  top: 0;
-  left: 0;
-  width: 106vw;
-  height: 106vh;
-  background-image: url('./src/noise.png');
-  z-index: 200;
-  opacity: 0.4;
-}
-
-body {
-  background: var(--blue_02);
-  overflow-x: hidden;
-  width: 100%;
-}
-
-.width {
-  max-width: 1400px;
-  width: calc(100% - 100px);
-  margin: auto;
-}
-
-.button__blue {
-  background: var(--blue_00);
-  color: #fff;
-  font-size: 16px;
-  border: none;
-  border-radius: 50px;
-  padding: 10px 30px;
-  cursor: pointer;
-  width: max-content;
-  height: 40px;
-  text-align: center;
-  text-wrap: nowrap;
-  white-space: nowrap;
-  transition: .5s;
-}
-
-.button__blue:hover {
-  background: var(--blue_01);
-  transition: .5s;
-}
-
-.button__whatsapp {
-  transition: .2s;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  border: 2px solid #2DB742;
-  border-radius: 14px;
-  background: none;
-  color: white;
-  font-size: 16px;
-  height: 40px;
-  padding: 0 14px;
-  width: max-content;
-  cursor: pointer;
-}
-
-.button__whatsapp img {
-  width: 24px;
-  object-fit: contain;
-}
-
-.button__whatsapp:hover {
-  background: rgba(56, 120, 73, 0.4);
-  transition: .2s;
-}
-
-section, footer {
-  position: relative;
-}
-
-.link__ancor {
-  position: absolute;
-  height: 100px;
-  width: 100%;
-  bottom: 100%;
-}
-
-/* Nav */
-
-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  z-index: 6;
-}
-
-nav {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background: #060f16d1;
-  height: 80px;
-  backdrop-filter: blur(14px);
-  padding: 0 30px;
-  width: 100%;
-  border-radius: 0 0 30px 30px;
-  box-shadow: 4px 3px 20px rgba(0, 0, 0, 0.4);
-}
-
-.nav__options {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-}
-
-.nav__logo {
-  height: 30px;
-  object-fit: contain;
-  margin-right: 20px;
-}
-
-.nav__link {
-  color: #fff;
-  font-size: 16px;
-  transition: .2s;
-}
-
-.nav__link:hover {
-  color: #c2c2c2;
-  transition: .2s;
-}
-
-.nav__cadastrar {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  margin-left: auto;
-}
-
-/* Header */
-
-.banner {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  height: 90vh;
-  max-height: 900px;
-  background-image: url('./src/maps.png');
-  background-size: cover;
-  background-repeat: no-repeat;
-  color: white;
-  overflow: hidden;
-}
-
-.banner__container {
-  display: grid;
-  grid-template-columns: 1fr max-content;
-  position: absolute;
-  bottom: 0;
-  height: 730px;
-  backdrop-filter: blur(20px);
-  border-radius: 30px 30px 0 0;
-  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.4));
-  padding: 100px 80px;
-  z-index: 2;
-}
-
-.banner__buttons {
-  display: flex;
-  gap: 14px;
-  align-items: center;
-}
-
-.banner__logo {
-  height: 130px;
-  width: max-content;
-  z-index: 2;
-}
-
-h1 {
-  font-size: 40px;
-}
-
-.banner__column {
-  position: relative;
-  width: 40%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.banner__p {
-  font-size: 20px;
-  font-weight: 300;
-}
-
-/*  */
-
-.banner__graf--logo {
-  position: absolute;
-  right: -360px;
-  top: -100px;
-  height: 1000px;
-  opacity: 0.2;
-  filter: drop-shadow();
-  z-index: 1;
-}
-
-.banner__grafismo {
-  position: absolute;
-  top: 0;
-  right: -50px;
-  height: 100%;
-  width: 650px;
-  /* background: rgba(255, 0, 0, 0.4); */
-  z-index: 2;
-}
-
-.banner_graf-01 {
-  position: absolute;
-  height: 500px;
-  left: 20%;
-  top: 20%;
-  z-index: 2;
-}
-
-.banner__car {
-  position: absolute;
-  left: 70px;
-  object-fit: contain;
-  width: 400px;
-}
-
-.banner__container--car {
-  position: relative;
-  margin-top: 223px;
-}
-
-.banner__car-toyota {
-  top: 0;
-  left: -76px;
-  z-index: 1;
-  animation: car__animation 6s infinite;
-}
-
-.banner__toyota {
-  left: 73px;
-  top: 85px;
-  z-index: 3;
-  animation-delay: .2s;
-  animation: car__animation 6s infinite;
-}
-
-.banner__car-mercedes {
-  z-index: 4;
-  top: 143px;
-  left: 194px;
-  animation: car__animation 6s infinite;
-  animation-delay: .4s;
-}
-
-.banner__cg {
-  width: 245px;
-  top: 174px;
-  left: 356px;
-  animation: car__animation 6s infinite;
-  animation-delay: .6s;
-  z-index: 4;
-}
-
-@keyframes car__animation {
-
-  0% { transform: translateX(0) }
-  
-  30% { transform: translateX(0) }
-
-  50% { transform: translateX(-40px) }
-
-  70% { transform: translateX(0) }
-
-  100% { transform: translateX(0) }
-}
-
-/* SOBRE */
-
-.sobre {
-  padding: 80px 0;
-  background-image: linear-gradient(140deg, white, #6E7789);
-  width: 100%;
-  overflow: hidden;
-}
-
-.sobre__grid {
-  position: relative;
-  display: grid;
-  width: calc(100% - 200px);
-  grid-template-columns: 330px 2fr;
-  box-shadow: 4px 4px 80px rgba(0, 0, 0, 0.4);
-  border-radius: 30px;
-}
-
-.sobre__column-1 {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  background: black;
-  width: 100%;
-  border-radius: 30px 0 0 30px;
-}
-
-
-.sobre__pin {
-  transform: translatex(-4px);
-  width: calc(100% + 8px);
-  border-radius: 0 0 0 30px;
-}
-
-.sobre__moto {
-  position: absolute;
-  bottom: -30px;
-  margin: auto;
-  object-fit: contain;
-  width: calc(100% + 260px);
-  z-index: 3;
-}
-
-.sobre__column-2 {
-  background: #fff;
-  border-radius: 0 30px 30px 0;
-  padding: 34px 60px 60px 40px;
-  overflow: hidden;
-}
-
-h2 {
-  font-size: 32px;
-  margin-bottom: 40px;
-}
-
-.sobre__nos {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  border-radius: 10px;
-  box-shadow: 4px 4px 140px rgba(0, 0, 0, 0.2);
-  padding: 40px;
-  z-index: 2;
-  background-image: linear-gradient(120deg, white, #c2c2c2);
-}
-
-.sobre__description {
-  position: relative;
-  font-size: 14px;
-}
-
-.sobre__title {
-  font-size: 18px;
-  font-weight: 700;
-  z-index: 1;
-}
-
-.sobre__sombra {
-  position: absolute;
-  top: 160px;
-  left: 200px;
-  width: 798px;
-  height: 856px;
-  transform: rotate(48deg);
-  background-image: linear-gradient(#778a9d, #67737E, rgb(93, 96, 104), #67737E, #7e7f85);
-  filter: blur(40px);
-}
-
-/* SOLUÇÕES */
-
-.solucoes {
-  background-color: black;
-  color: white;
-}
-
-.solucoes__header {
-  padding: 60px 0 80px 0;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-h3 {
-  font-size: 32px;
-}
-
-.solucoes__header p {
-  color: #C7C7C7;
-}
-
-.solucoes__grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  width: 100%;
-}
-
-.solucoes__card-1 {
-  display: flex;
-  flex-direction: column;
-}
-
-.solucoes__texts {
-  padding: 20px;
-}
-
-.solucoes__number {
-  font-weight: 300px;
-  font-size: 24px;
-}
-
-.solucoes__title {
-  font-size: 24px;
-  font-weight: 800;
-}
-
-.solucoes__p {
-  font-size: 15px;
-  color: #C7C7C7;
-}
-
-.solucoes__text {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 20px;
-  padding: 20px;
-  height: 340px;
-}
-
-.solucoes__img {
-  width: 100%;
-  height: 400px;
-  object-fit: cover;
-  border-radius: 30px;
-  transition: .2s;
-}
-
-.solucoes__card-1 {
-  position: relative;
-}
-
-.solucoes__card-2 {
-  position: relative;
-  display: flex;
-  flex-direction: column-reverse;
-}
-
-/* APP */
-
-.background {
-  position: relative;
-  background-image: linear-gradient(60deg, transparent, #17739e1f);
-}
-
-.background::before {
-  content: '';
-  left: 0;
-  top: 0;
-  background-image: linear-gradient(90deg, #060E16, transparent, transparent, transparent, transparent, transparent, #060E16);
-  opacity: .8;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  pointer-events: none;
-  z-index: 2;
-}
-
-.app {
-  width: 100%;
-  overflow: hidden;
-}
-
-.app__container {
-  display: grid;
-  grid-template-columns: 1fr 1.2fr;
-  gap: 40px;
-  color: white;
-  padding: 160px 0 100px 0;
-}
-
-.app__column-1 {
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-  min-width: 464px;
-  z-index: 5;
-}
-
-h4 {
-  font-size: 90px;
-}
-
-.app__description {
-  font-size: 14px;
-  font-weight: 300;
-}
-
-.app__topics {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-  margin-bottom: 20px;
-}
-
-.app__title {
-  color: #7b7b7b;
-}
-
-.app__title span {
-  font-weight: 600;
-  font-size: 18px;
-  text-decoration: underline;
-  color: white;
-}
-
-.app__text {
-  font-size: 16px;
-  font-weight: 200;
-}
-
-.app__store {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.app__store p {
-  font-size: 22px;
-}
-
-.app__store img {
-  height: 44px;
-}
-
-.app__images {
-  display: flex;
-  gap: 20px;
-}
-
-/* App arte Celular */
-
-.phone {
-  position: relative;
-  display: flex;
-  align-items: center;
-  width: 600px;
-  height: 800px;
-  z-index: 3;
-  margin: auto;
-  transform: translateX(70px);
-}
-
-.phone--img {
-  position: absolute;
-  width: calc(100% + 100px);
-  height: calc(100% + 100px);
-  margin: auto;
-  transform: translatex(40px);
-}
-
-.phone__pin {
-  position: absolute;
-  z-index: 6;
-}
-
-.phone__pin--1 {
-  top: 405px;
-  left: 81px;
-  animation: pin3 5s infinite;
-}
-
-.phone__pin--2 {
-  top: 41px;
-  left: 237px;
-  animation: pin3 5s infinite;
-  animation-delay: .2s;
-}
-
-.phone__pin--3 {
-  top: 200px;
-  left: 10px;
-  animation: pin3 5s infinite;
-  animation-delay: .4s;
-}
-
-@keyframes pin3 {
-
-  0% { transform: translateY(0) }
-  
-  40% { transform: translateY(0) }
-  
-  50% { transform: translateY(-20px) }
-
-  55% { transform: translateY(-20px) }
-
-  80% { transform: translateY(0) }
-
-  100% { transform: translateY(0) }
-  
-}
-
-.phone__animation {
-  position: absolute;
-  top: -100px;
-  z-index: 1;
-  animation: cellphone 10s infinite;
-}
-
-@keyframes cellphone {
-
-  0% { transform: translateY(0) }
-
-  35% { transform: translateY(50px) }
-
-  65% { transform: translateY(50px) }
-  
-  100% { transform: translateY(0) }
-}
-
-
-.phone__grafismos {
-  position: absolute;
-  width: calc(100% + 250px);
-  height: max-content;
-  left: -221px;
-  top: 66px;
-  pointer-events: none;
-}
-
-.phone__grafismos--1 {
-  z-index: 2;
-}
-
-.phone__grafismos--2 {
-  z-index: 0;
-}
-
-.phone--cellphone {
-  position: absolute;
-  filter: drop-shadow(-22px 6px 24px black);
-  width: 450px;
-  height: max-content;
-  object-fit: contain;
-  z-index: 1;
-}
-
-/* CARROSSEL */
-
-.carousel {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
-  height: 800px;
-  width: 100%;
-  overflow: hidden;
-  background-image: linear-gradient(0deg, #1a5e7e, transparent);
-}
-
-.carousel * {
-  transition: .2s;
-}
-
-.carousel__iframe {
-  position: absolute;
-  display: flex;
-  justify-content: center;
-  margin: auto;
-  outline: 2px solid #2c2c2c;
-  border: 2px solid black;
-  border-radius: 30px;
-  height: 642px;
-  width: 300px;
-  box-shadow: 3px 3px 30px rgba(0, 0, 0, 0.4);
-  z-index: 3;
-}
-
-.carrousel__buttons {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0 30px;
-  background: #1B1B1B;
-  height: 34px;
-  width: 100%;
-  border-radius: 0 0 30px 30px;
-  position: absolute;
-  bottom: 0;
-}
-
-.carousel__iframe::before {
-  /* Camera */
-  content: '';
-  position: absolute;
-  margin: auto;
-  height: 22px;
-  background: rgb(32, 32, 32);
-  width: 100px;
-  border-radius: 0 0 10px 10px;
-  border-color: #a4a4a4;
-  border-width: 0 1px 1px 0;
-  border-style: solid;
-  z-index: 2;
-}
-
-.carousel__iframe::after {
-  content: '';
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-image: linear-gradient(rgba(255, 255, 255, 0.2), transparent, transparent);
-  z-index: 1;
-  border-radius: 30px;
-}
-
-.carousel__container {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 22px;
-  width: calc(100% - 300px);
-  max-width: 1028px;
-  height: 100%;
-  user-select: none;
-}
-
-.carousel__container img {
-  box-shadow: 6px 7px 12px rgba(0, 0, 0, 0.5)
-
-}
-
-[img_default] {
-  width: 200px;
-  height: 438px;
-  position: absolute;
-  object-fit: cover;
-  border-radius: 30px;
-  width: 200px;
-  height: 438px;
-  transform: translatex(-50%);
-}
-
-[frame_size="img_b"] {
-  width: 240px;
-  height: 542px;
-  z-index: 1;
-}
-
-[frame_size="img_c"] {
-  width: 296px;
-  height: 638px;
-  border-radius: 26px;
-  z-index: 2;
-}
-
-.carousel__buttons {
-  position: absolute;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 450px;
-  border-radius: 30px;
-  height: 100%;
-  transition: .2s;
-}
-
-.carousel__button--left,
-.carousel__button--right {
-  position: absolute;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: none;
-  font-size: 60px;
-  border: none;
-  font-weight: 200;
-  color: white;
-  z-index: 3;
-  transition: .2s;
-  cursor: pointer;
-  border-radius: 50%;
-  width: 50px;
-  height: 50px;
-  transition: .2s;
-  background: rgba(0, 0, 0, 0.6);
-  background-image: linear-gradient(var(--blue_00), #102c55);
-  z-index: 4;
-}
-
-.carousel__button--left img,
-.carousel__button--right img {
-  width: 30px;
-  height: 30px;
-}
-
-.carousel__button--left {
-  left: 0;
-}
-
-.carousel__button--right {
-  right: 0;
-}
-
-.carousel__button--left:hover,
-.carousel__button--right:hover {
-  backdrop-filter: blur(10px);
-  transition: .2s;
-  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
-  opacity: 0.9;
-}
-
-/* PLAIN */
-
-.plain {
-  background: white;
-  padding: 100px 0;
-}
-
-.plain .width {
-  width: calc(100% - 300px);
-  margin-bottom: 40px;
-  max-width: initial;
-}
-
-h5 {
-  font-size: 52px;
-  font-weight: 700;
-}
-
-.plain__container {
-  position: relative;
-  display: flex;
-  box-shadow: 3px 3px 30px rgba(0, 0, 0, 0.2);
-  padding: 40px;
-  width: calc(100% - 80px);
-  border-radius: 12px;
-  max-width: 1600px;
-  overflow: hidden;
-  margin: auto;
-}
-
-.plain__grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  gap: 10px;
-  padding-right: 308px;
-}
-
-.plain__price {
-  display: flex;
-  align-items: center;
-}
-
-.plain__price--money {
-  font-size: 16px;
-}
-
-.plain__price--value {
-  font-size: 42px;
-  font-weight: 800;
-}
-
-.plain__options li {
-  font-size: 14px;
-  margin-left: -4px;
-}
-
-.plain__options ul {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-}
-
-.plain__cards {
-  position: relative;
-  border-radius: 30px;
-  overflow: hidden;
-  box-shadow: 3px 3px 30px rgba(0, 0, 0, 0.2);
-}
-
-.plain__container--card {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-  height: 360px;
-  padding: 16px;
-}
-
-.plain__button--blue {
-  position: absolute;
-  z-index: 4;
-  background: var(--blue_00);
-  color: white;
-  border-radius: 50px;
-  font-size: 14px;
-  font-weight: 400;
-  border: none;
-  padding: 5px 10px;
-  bottom: 20px;
-  width: calc(100% - 30px);
-  transition: .5s;
-  cursor: pointer;
-}
-
-.plain__button--blue:hover {
-  background: var(--blue_01);
-  transition: .5s;
-}
-
-.plain ul {
-  margin-left: 20px;
-}
-
-.plain__header {
-  background: var(--blue_00);
-  color: white;
-  font-size: 24px;
-  padding: 16px 20px;
-  border-radius: 30px 30px 0 0;
-}
-
-.plain__car {
-  position: absolute;
-  right: -80px;
-  width: 400px;
-  bottom: -160px;
-}
-
-/* CONTATO */
-
-.contato {
-  overflow: hidden;
-}
-
-.contato__container {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  color: white;
-  padding-top: 100px;
-}
-
-.contanto__relatos {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 20px;
-}
-
-.contato__card {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  background: var(--blue_00);
-  padding: 16px;
-  border: 14px;
-  color: white;
-  font-size: 14px;
-  border-radius: 10px;
-  gap: 12px;
-}
-
-.contato__card::before {
-  position: absolute;
-  content: '"';
-  top: -20px;
-  left: 60px;
-  display: flex;
-  justify-content: center;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background: var(--cinza);
-  line-height: 56px;
-  font-family: Georgia, 'Times New Roman', Times, serif;
-  color: white;
-  font-size: 34px;
-}
-
-.contato__p {
-  font-weight: 200;
-}
-
-.contato__person {
-  display: flex;
-  gap: 10px;
-  align-items: center;
-  width: 100%;
-  font-size: 14px;
-}
-
-.contato__person img {
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  object-fit: cover;
-}
-
-.contato__name {
-  display: flex;
-  flex-direction: column;
-}
-
-.contato__images {
-  position: absolute;
-  left: 56%;
-  bottom: 0;
-  width: 700px;
-  height: 100%;
-}
-
-h6 {
-  font-size: 38px;
-  font-weight: 800;
-}
-
-.contrato__car {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  object-fit: contain;
-  object-position: right;
-  animation: contrato__car 10s infinite;
-}
-
-.contato__fiesta {
-  height: 275px;
-  right: 418px;
-  bottom: 70px;
-}
-
-.contato__truck {
-  z-index: 2;
-  right: -200px;
-  height: 600px;
-  animation-delay: .2s;
-}
-
-.contato__toyota {
-  z-index: 3;
-  height: 381px;
-  bottom: -64px;
-  right: -100px;
-  animation-delay: .4s;
-}
-
-@keyframes contrato__car {
-
-  0% {
-    transform: translateX(0);
-  }
-
-  35% {
-    transform: translateX(0);
-  }
-
-  50% {
-    transform: translateX(-100px);
-  }
-  
-  75% {
-    transform: translateX(0);
-  }
-
-  100% {
-    transform: translateX(0);
-  }
-}
-
-.contato__truck {
-  position: absolute;
-}
-
-.contato__message {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-  z-index: 2;
-  margin-left: 20px;
-  padding: 10px;
-  text-align: center;
-}
-
-.contato__message p {
-  font-size: 20px;
-}
-
-.contato__arrow {
-  font-size: 26px;
-}
-
-.contato__cars {
-  position: relative;
-  display: flex;
-  align-items: center;
-  height: 600px;
-  width: 100%;
-}
-
-/* FOOTER */
-
-footer {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-top: 100px;
-  width: 100%;
-  color: white;
-  background-image: linear-gradient(166deg, transparent, transparent, rgba(217, 217, 217, 0.4));
-  text-shadow: 8px 8px 10px rgba(0, 0, 0, 0.3);
-}
-
-.footer__container {
-  position: relative;
-  background-image: linear-gradient(120deg, #696969, #2F2F2F);
-  width: calc(100% - 200px);
-  border-radius: 30px 30px 0 0;
-  padding: 60px 100px;
-  bottom: 0;
-  overflow: hidden;
-  box-shadow: 24px 24px 34px rgb(11 20 27 / 40%);
-}
-
-.footer__grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 40px;
-}
-
-.footer__column-1 {
-  display: flex;
-  flex-direction: column;
-  gap: 18px;
-}
-
-.footer__column-1 img {
-  height: 50px;
-  width: max-content;
-}
-
-form {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  background: white;
-  background-image: linear-gradient(120deg, white, #9c9c9c);
-  padding: 20px;
-  border-radius: 10px;
-  width: 340px;
-  box-shadow: 15px 18px 26px rgba(0, 0, 0, 0.2);
-}
-
-form img {
-  height: 40px;
-  width: max-content;
-  margin-bottom: 20px;
-}
-
-input[type='text'],
-textarea {
-  background: var(--cinza);
-  color: white;
-  font-size: 14px;
-  font-weight: 300;
-  padding: 10px 14px;
-  border: 2px solid transparent;
-  border-radius: 10px;
-  transition: .3s;
-  outline: 2px solid transparent;
-}
-
-input[type='text']::placeholder,
-textarea::placeholder {
-  color: white;
-  transition: .3s;
-}
-
-input[type='text']:focus::placeholder,
-textarea:focus::placeholder {
-  color: var(--blue_00);
-  transition: .3s;
-}
-
-input[type='text']:hover,
-textarea:hover {
-  border: 2px solid var(--blue_00);
-  outline: 2px solid var(--cinza);
-  transition: .3s;
-}
-
-input[type='text'] {
-  height: 40px;
-}
-
-textarea {
-  height: 140px;
-}
-
-input[type='submit'] {
-  background: var(--blue_00);
-  color: white;
-  font-size: 16px;
-  width: 100%;
-}
-
-.footer__sombra {
-  position: absolute;
-  top: 146px;
-  left: 83px;
-  width: 608px;
-  height: 456px;
-  transform: rotate(48deg);
-  background-image: linear-gradient(94deg, rgb(34 34 34), #3b3b3b);
-  filter: blur(40px);
-}
-
-.footer__rodape {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-  height: 60px;
-  padding: 0 40px;
-  font-weight: 200;
-  background: black;
-  color: white;
-  font-size: 14px;
-}
-
-.footer__forms {
-  position: relative;
-}
-
-.footer__column-2 {
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-}
-
-.footer__title {
-  font-size: 20px;
-}
-
-.footer__p {
-  font-size: 18px;
-}
-
-.footer__texts {
-  line-height: 24px;
-  font-size: 14px;
-  font-weight: 300;
-}
-
-.footer__store {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-}
-
-.footer__redes {
-  color: white;
-  font-size: 16px;
-  transition: .2s;
-}
-
-.footer__redes:hover {
-  color: #c2c2c2;
-  transition: .2s;
-  text-decoration: underline;
-}
-
-.footer__column-2--response {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-/* Responsividade */
-
-.close__aside {
-  display: none;
-  color: white;
-  position: absolute;
-  right: 55px;
-  top: 10px;
-  font-size: 30px;
-  padding: 10px;
-  background: none;
-  border: none;
-  transition: .2s;
-  cursor: pointer;
-  z-index: 2;
-  text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.8);
-}
-
-.close__aside:hover {
-  color: gray;
-  transition: .2s;
-}
-
-.nav__hamburguer {
-  display: none;
-  width: 30px;
-  transition: .2s;
-  cursor: pointer;
-  margin-left: 16px;
-}
-
-.nav__hamburguer:hover {
-  opacity: 0.8;
-  transition: .2s;
-}
-
-@media screen and (max-width: 1200px) {
-  .width {
-    width: calc(100% - 50px);
-  }
-
-  /* Header */
-
-  .banner__column {
-    width: 100%;
-  }
-
-  .banner__grafismo, .banner__container {
-    position: relative;
-  }
-
-  .banner__grafismo {
-    width: 100%;
-    height: 310px;
-    right: 0;
-    margin: 40px 0;
-  }
-  
-  .banner_graf-01 {
-    height: 400px;
-    left: 100px;
-    z-index: 2;
-  }
-  
-  .banner__container, .banner {
-    height: max-content;
-  }
-
-  .banner__container {
-    display: flex;
-    flex-direction: column-reverse;
-    padding: 60px;
-  }
-
-  .banner__logo {
-    height: 60px;
-  }
-
-  .banner__column {
-    gap: 20px;
-  }
-
-  .banner {
-    padding-top: 140px;
-  }
-
-  .banner__container--car {
-    margin-top: 0;
-  }
-
-  .banner__car {
-    width: 300px;
-  }
-
-  .banner__car-toyota {
-    left: -48px;
-  }
-
-  .banner__toyota {
-    left: 0;
-  }
-
-  .banner__car-mercedes {
-    left: 90px;
-  }
-
-  .banner__cg {
-    width: 190px;
-    left: 172px;
-    top: 184px;
-  }
-
-  /* APP */
-
-  .app__container {
-    display: flex;
-    flex-direction: column-reverse;
-  }
-  
-  .phone--img {
-    position: relative;
-    width: calc(100% - 50px);
-    height: 500px;
-    transform: none;
-  }
-
-  .app__store {
-    justify-content: center;
-    text-align: center;
-  }
-
-  .app__images {
-    margin: auto;
-  }
-
-  /* phone */
-
-  .phone {
-    width: 100%;
-    transform: translateX(32px);
-    height: 600px;
-  }
-
-  .app__column-1 {
-    min-width: initial;
-    text-align: center;
-  }
-
-  .phone__pin {
-    width: 120px;
-  }
-
-  .phone__pin--1 {
-    top: 280px;
-    left: 81px;
-  
-  }
-  .phone__pin--2 {
-    top: 37px;
-    left: 137px;
-  }
-  
-  .phone--cellphone {
-    width: 300px;
-  }
-
-  .phone__grafismos {
-    width: 560px;
-    left: -121px;
-    top: 41px;
-  }
-
-  /* PLANOS */
-
-  .plain__grid {
-    display: flex;
-    flex-direction: column;
-    padding: 0;
-  }
-  
-  .plain__container {
-    flex-direction: column;
-    width: calc(100% - 50px);
-  }
-
-  .plain__container--card {
-    padding: 18px 18px 68px 18px;
-    height: max-content;
-  }
-
-  .plain__car {
-    object-fit: contain;
-    top: 20px;
-    bottom: initial;
-    right: initial;
-    transform: translatex(76px);
-    margin: auto;
-  }
-
-  .plain__car--response {
-    display: flex;
-    justify-content: center;
-    position: relative;
-    height: 300px;
-  }
-
-  /* Sobre */
-
-  .sobre__grid {
-    display: flex;
-    flex-direction: column-reverse;
-  }
-
-  .sobre__column-2 {
-    border-radius: 30px 30px 0 0;
-    padding: 30px;
-  }
-
-  .sobre__column-1 {
-    border-radius: 0 0 30px 30px
-  }
-  
-  .sobre__moto {
-    width: calc(76% + 260px);
-  }
-
-  h2 {
-    margin-bottom: 20px;
-  }
-
-  /* Soluções */
-
-  .solucoes__grid {
-    grid-template-columns: 1fr 1fr;
-  }
-  
-  .nav__container {
-    width: 100%;
-  }
-
-  /* Contato */
-
-  .contanto__relatos {
-    display: flex;
-    overflow: hidden;
-    width: calc(100% - 20px);
-    padding-top: 20px;
-    gap: 0;
-  }
-
-  .contato__card {
-    animation: 15s comentarios infinite;
-    min-width: 100%;
-  }
-
-  @keyframes comentarios {
-    0% { transform: translateX(0); }
-    25% { transform: translateX(0); }
-    30% { transform: translateX(-100%); }
-    60% { transform: translateX(-100%); }
-    65% { transform: translateX(-200%); }
-    92% { transform: translateX(-200%); }
-    100% { transform: translateX(0); }
-  }
-
-  .contato__images {
-    position: relative;
-    left: 48%;
-  }
-
-  .contato__cars {
-    flex-direction: column;
-  }
-
-  /* Footer */
-  
-  .footer__grid {
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
-    align-items: center;
-    text-align: center;
-  }
-
-  .footer__store {
-    align-items: center;
-  }
-}
-
-@media screen and (max-width: 1000px) {
-
-  .nav__options--response, .nav__cadastrar {
-    display: none;
-  }
-
-  .nav__responsive--overlay, .nav__responsive--overlay * {
-    transition: .2s;
-  }
-
-  .nav__responsive .nav__responsive--overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 104vw;
-    background: rgba(0, 0, 0, 0.7);
-    height: 104vh;
-    z-index: 2;
-  }
-
-  .nav__responsive .nav__options {
-    position: absolute;
-    top: 0;
-    left: -10px;
-    display: flex;
-    flex-direction: column;
-    background-image: linear-gradient(#007AFF, #032951);
-    width: 300px;
-    height: 100vh;
-    padding-top: 20px;
-  }
-
-  .nav__responsive .close__aside, .nav__hamburguer { 
-    display: block;
-  }
-
-  .nav__responsive .nav__options {
-    gap: 0;
-  }
-
-  .nav__responsive .nav__options a {
-    display: flex;
-    align-items: center;
-    width: 100%;
-    padding: 16px 30px;
-    text-align: start;
-  }
-  
-  .nav__responsive .nav__options a:hover {
-    background: rgba(0, 0, 0, 0.3);
-    transition: .2s;
-  }
-
-  /* Footer */
-  
-  .footer__rodape {
-    flex-direction: column;
-    gap: 20px;
-    padding: 40px;
-    text-align: center;
-    height: max-content;
-  }
-}
-
-@media screen and (max-width: 650px) {
-  .solucoes__grid {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .solucoes__card-2 {
-    flex-direction: column;
-  }
-  .solucoes__text {
-    height: 240px;
-  }
-
-  .solucoes__img {
-    height: 300px;
-  }
-}
-
-@media screen and (max-width: 500px) {
-
-  .width {
-    width: calc(100% - 20px);
-  }
-
-  .banner__p, .button__blue, .button__whatsapp {
-    font-size: 14px !important;
-  }
-
-  .button__blue, .button__whatsapp {
-    padding: 10px 20px;
-    width: 100%;
-  }
-
-  /* BANNER */
-
-  .banner__container {
-    padding: 20px;
-  }
-
-  .banner__logo {
-    height: 40px;
-  }
-
-  h1 {
-    font-size: 30px;
-  }
-
-  .banner_graf-01 {
-    height: 300px;
-  }
-
-  .sobre__column-2 {
-    padding: 20px;
-  }
-
-  .sobre__nos {
-    padding: 20px;
-  }
-
-  /* SOBRE */
-
-  .sobre {
-    padding: 30px 0;
-  }
-
-  /* SOLUÇÕES */
-
-  .solucoes__img {
-    height: 200px;
-  }
-
-  .solucoes__text--response {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-  }
-
-  /* APP */
-
-  h4 {
-    font-size: 40px;
-    text-align: center;
-    margin-bottom: 24px;
-  }
-
-  /* CARROSSEL */
-
-  .carousel__buttons {
-    width: calc(100% - 20px);
-  }
-
-  /* PLAIN */
-
-  .plain__container {
-    width: calc(100% - 20px);
-    padding: 20px;
-  }
-
-  h5 {
-    font-size: 44px;
-  }
-
-  .plain__h5--response {
-    width: 100% !important;
-    padding: 0 20px;
-  }
-  
-  .plain {
-    padding: 30px 0 50px 0;
-  }
-
-  /* CONTATO */
-
-  .contato__truck {
-    right: 84px;
-    height: 362px;
-  }
-
-  .contato__toyota {
-    height: 180px;
-    bottom: 1px;
-    right: 243px;
-  }
-  
-  .contato__fiesta {
-    height: 140px;
-    right: 472px;
-    bottom: 55px;
-  }
-
-  h6 {
-    font-size: 30px;
-  }
-
-  .contato__message p {
-    font-size: 16px;
-  }
-
-  .contato__arrow {
-    font-size: 22px;
-  }
-
-  /* FOOTER */
-
-  .footer__rodape p {
-    font-size: 12px;
-    font-weight: 200px;
-  }
-
-  .footer__rodape {
-    padding: 20px 10px;
-  }
-  
-  .footer__redes--title {
-    text-wrap: nowrap;
-    white-space: nowrap;
-  }
-
-  .footer__column-2 {
-    display: flex;
-    gap: 20px;
-    align-items: center;
-    flex-direction: initial;
-  }
-
-  .footer__container {
-    padding: 60px 10px;
-    width: calc(100% - 20px);
-  } 
-
-  .footer__forms {
-    width: 100%;
-  }
-
-  form {
-    width: calc(100% - 20px);
-    margin: auto;
-  }
-
-  .footer__redes--title {
-    font-size: 16px;
-  }
-
-}
-</style>
 </html>
