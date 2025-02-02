@@ -29,11 +29,12 @@ a {
   pointer-events: none;
   top: 0;
   left: 0;
-  width: 106vw;
-  height: 106vh;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
   background-image: url('./src/noise.png');
   z-index: 200;
-  opacity: 0.3;
+  opacity: 0.4;
 }
 
 body {
