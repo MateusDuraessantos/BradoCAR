@@ -8,21 +8,6 @@
   <meta name="description" content="Mateus Durães dos Santos - 2024.">
   <link rel="icon" href="./src/favicon.png" type="image/x-icon">
   <style>
-    
-    * {
-      font-family: "Inter", sans-serif;
-      padding: 0;
-      margin: 0;
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    a {
-      text-decoration: none;
-    }
 
     :root {
       --blue_00: #17739E;
@@ -31,6 +16,45 @@
       --red: #FF1818;
       --cinza: #323232;
       --preto: #121212;
+      --background-scroll: #b8b8b8
+    }
+    
+    * {
+      font-family: "Inter", sans-serif;
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    body::-webkit-scrollbar-thumb {
+      background-color: var(--blue_00);
+      border-radius: 6px;
+      border: 0px solid var(--background-scroll);
+    }
+
+    ::-webkit-scrollbar {
+        width: 8px;
+        height: 12px;
+        background-color: var(--background-scroll);
+        border-radius: 6px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background-color: #cdcdcd;
+        border-radius: 6px;
+        border: 0px solid var(--background-scroll);
+    }
+
+    ::-webkit-scrollbar-corner {
+        background-color: transparent;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    a {
+      text-decoration: none;
     }
 
     .noise {
