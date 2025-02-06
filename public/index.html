@@ -76,6 +76,35 @@
       width: 100%;
     }
 
+    .whatsapp {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25D366;
+      color: #FFF;
+      border-radius: 50%;
+      width: 55px;
+      height: 55px;
+      border: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-decoration: none;
+      z-index: 9999;
+      transition: all 0.3s ease-in-out;
+    }
+   
+    .whatsapp:hover {
+      transform: scale(1.1);
+      box-shadow: 0px 0px 15px #25D366; 
+
+    }
+    
+    .whatsapp__icon {
+      width: 30px;
+      height: 30px;
+    }
+
     .width {
       max-width: 1400px;
       width: calc(100% - 100px);
@@ -131,6 +160,7 @@
 
     section, footer {
       position: relative;
+      overflow-x: hidden;
     }
 
     .link__ancor {
@@ -145,14 +175,12 @@
     header {
       position: fixed;
       top: 0;
+      right: 0;
       left: 0;
+      margin: auto;
       display: flex;
       justify-content: center;
-      width: 100%;
       z-index: 6;
-    }
-
-    nav {
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -160,9 +188,17 @@
       height: 80px;
       backdrop-filter: blur(14px);
       padding: 0 30px;
-      width: 100%;
+      max-width: 1400px;
+      width: calc(100% - 100px);
       border-radius: 0 0 30px 30px;
       box-shadow: 4px 3px 20px rgba(0, 0, 0, 0.4);
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
     }
 
     .nav__options {
@@ -181,6 +217,7 @@
       color: #fff;
       font-size: 16px;
       transition: .2s;
+      text-wrap: nowrap;
     }
 
     .nav__link:hover {
@@ -204,6 +241,7 @@
       width: 100%;
       height: 90vh;
       max-height: 900px;
+      min-height: 860px;
       color: white;
       overflow: hidden;
     }
@@ -1395,33 +1433,8 @@
 
     /* Responsividade */
 
-    .close__aside {
-      display: none;
-      color: white;
-      position: absolute;
-      right: 55px;
-      top: 10px;
-      font-size: 30px;
-      padding: 10px;
-      background: none;
-      border: none;
-      transition: .2s;
-      cursor: pointer;
-      z-index: 2;
-      text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.8);
-    }
-
-    .close__aside:hover {
-      color: gray;
-      transition: .2s;
-    }
-
     .nav__hamburguer {
       display: none;
-      width: 30px;
-      transition: .2s;
-      cursor: pointer;
-      margin-left: 16px;
     }
 
     .nav__hamburguer:hover {
@@ -1683,58 +1696,89 @@
     }
 
     @media screen and (max-width: 1000px) {
+      
+      header {
+        border-radius: 0;
+        background: #060E16;
+      }
 
-      .nav__options--response, .nav__cadastrar {
+      #nav {
         display: none;
       }
 
-      .nav__responsive--overlay, .nav__responsive--overlay * {
+      .nav__logo {
+        margin: auto;
+      }
+
+      .nav__hamburguer {
+        display: block;
+        width: 30px;
         transition: .2s;
+        cursor: pointer;
+        margin-left: 16px;
       }
 
-      .nav__responsive .nav__responsive--overlay {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 104vw;
-        background: rgba(0, 0, 0, 0.7);
-        height: 104vh;
-        z-index: 2;
-      }
-
-      .nav__responsive .nav__options {
+      .nav__hamburguer {
         position: absolute;
-        top: 0;
-        left: -10px;
+        left: 20px;
+      }
+      .nav__options {
+        gap: 0;
+        margin: auto;
+      }
+
+      .nav__link, header .button__blue {
+        font-size: 20px;
+      }
+
+      .nav__responsive#nav {
+        position: fixed;
         display: flex;
         flex-direction: column;
-        background-image: linear-gradient(#007AFF, #032951);
-        width: 300px;
-        height: 100vh;
-        padding-top: 20px;
+        left: 0;
+        top: 80px;
+        background: #032951;
+        height: calc(100vh - 80px);
+        animation: open .5s forwards;
       }
 
-      .nav__responsive .close__aside, .nav__hamburguer { 
-        display: block;
+      @keyframes open {
+        from {
+          transform: translateX(-100vw);
+        }
+        to {
+          transform: translateX(0);
+        }
+      }
+
+      .nav__responsive .nav__options--response {
+        align-items: flex-start;
+        flex-direction: column;
+        display: flex;
+        margin-top: 20px;
+        width: 100%;
       }
 
       .nav__responsive .nav__options {
-        gap: 0;
-      }
-
-      .nav__responsive .nav__options a {
-        display: flex;
-        align-items: center;
         width: 100%;
-        padding: 16px 30px;
-        text-align: start;
+        height: 100%;
       }
       
-      .nav__responsive .nav__options a:hover {
-        background: rgba(0, 0, 0, 0.3);
-        transition: .2s;
+      .nav__responsive .nav__link {
+        display: flex;
+        align-items: center;
+        padding: 0 40px;
+        width: 100%;
+        height: 60px;
       }
 
+      .nav__responsive .nav__cadastrar {
+        width: 100%;
+        height: 80px;
+        padding-right: 32px;
+        background: var(--blue_02);
+      }
+      
       /* beneficios */
 
       .beneficios .width {
@@ -1789,7 +1833,7 @@
       }
 
       .banner__p, .button__blue, .button__whatsapp {
-        font-size: 14px !important;
+        font-size: 14px;
       }
 
       .button__blue, .button__whatsapp {
@@ -1948,30 +1992,46 @@
       }
 
     }
+
+
+    .close_aside {
+      animation: close .5s forwards !important;
+    }
+
+    @keyframes close {
+      from {
+        transform: translateX(0);
+      }
+      to {
+        transform: translateX(-102vw);
+      }
+    }
   </style>
 </head>
 
 <body>
 
   <div class="noise"></div>
+  <button class="whatsapp">
+    <img class="whatsapp__icon" src="./src/whatsapp_white.svg" alt="">
+  </button>
+
 
   <!-- Nav -->
-  <header>
-    <nav class="nav__container width" id="nav">
+  <header class="nav__container">
+    
+    <img loading="lazy" class="nav__logo" width="145" height="30" src="./src/bradocar.svg" alt="Logo BradoCar">
+    <img loading="lazy" class="nav__hamburguer" width="30" height="30" activeOnClick src="./src/hamburguer.svg" alt="">
+
+    <nav id="nav">
       <div class="nav__options">
-        <img loading="lazy" class="nav__logo" width="145" height="30" src="./src/bradocar.svg" alt="Logo BradoCar">
-
-        <div class="nav__responsive--overlay">
-          <button class="close__aside" activeOnClick>✕</button>
-
-          <div class="nav__options nav__options--response" activeOnClick>
-            <a href="#link-inicio" class="nav__link">Início</a>
-            <a href="#link-sobre" class="nav__link">Sobre</a>
-            <a href="#link-servicos" class="nav__link">Serviços</a>
-            <a href="#link-app" class="nav__link">App</a>
-            <a href="#link-planos" class="nav__link">Planos</a>
-            <a href="#link-contato" class="nav__link">Contato</a>
-          </div>
+        <div class="nav__options nav__options--response" activeOnClick>
+          <a href="#link-inicio" class="nav__link">Início</a>
+          <a href="#link-sobre" class="nav__link">Sobre</a>
+          <a href="#link-servicos" class="nav__link">Serviços</a>
+          <a href="#link-app" class="nav__link">App</a>
+          <a href="#link-planos" class="nav__link">Planos</a>
+          <a href="#link-contato" class="nav__link">Contato</a>
         </div>
       </div>
 
@@ -1979,7 +2039,6 @@
         <a href="" class="nav__link">Cadastrar-se</a>
         <button class="button__blue">Entrar</button>
       </div>
-      <img loading="lazy" class="nav__hamburguer" width="30" height="30" activeOnClick src="./src/hamburguer.svg" alt="">
     </nav>
   </header>
 
@@ -2604,7 +2663,17 @@
     const nav = document.querySelector('nav')
     let handleAside = false
     const openAside = () => {
-      handleAside ? nav.classList.remove('nav__responsive') : nav.classList.add('nav__responsive')
+      if(handleAside) {
+        nav.classList.add('close_aside')
+        setTimeout(() => {
+          nav.classList.remove('close_aside')
+          nav.classList.remove('nav__responsive')
+        }, 500);
+      } else {
+        nav.classList.add('nav__responsive')
+      }
+    
+      // handleAside ? nav.classList.remove('nav__responsive') : nav.classList.add('nav__responsive')
       handleAside = !handleAside
     }
 
