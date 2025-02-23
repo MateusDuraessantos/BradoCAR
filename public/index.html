@@ -78,7 +78,7 @@
 
     .whatsapp {
       position: fixed;
-      bottom: 20px;
+      bottom: 48px;
       right: 20px;
       background-color: #25D366;
       color: #FFF;
@@ -93,7 +93,7 @@
       z-index: 9999;
       transition: all 0.3s ease-in-out;
     }
-   
+
     .whatsapp:hover {
       transform: scale(1.1);
       box-shadow: 0px 0px 15px #25D366; 
@@ -1734,7 +1734,7 @@
       .nav__responsive#nav {
         position: fixed;
         display: flex;
-        flex-direction: column;
+        flex-direction: column-reverse;
         left: 0;
         top: 80px;
         background: #032951;
@@ -1749,6 +1749,9 @@
         to {
           transform: translateX(0);
         }
+      }
+      .nav__responsive * {
+        font-size: 16px !important;
       }
 
       .nav__responsive .nav__options--response {
@@ -1775,8 +1778,46 @@
       .nav__responsive .nav__cadastrar {
         width: 100%;
         height: 80px;
-        padding-right: 32px;
-        background: var(--blue_02);
+        border-bottom: 2px solid var(--blue_02);
+      }
+
+      .nav__responsive .footer__rodape {
+        flex-direction: column;
+        gap: 20px;
+        padding: 40px;
+        text-align: center;
+        height: max-content;
+      }
+
+      .nav__responsive .nav__cadastrar {
+        padding-right: 0;
+        align-content: center;
+        gap: 0;
+      }
+
+      .nav__responsive .nav_do_parceiro {
+        max-width: 50%;
+        height: 100%;
+        cursor: pointer;
+        background-color: #10a7e0;
+        color: #0a1d3f;
+        justify-content: center;
+      }
+
+      .nav__responsive .nav_do_cliente {
+        background-color: #97c93d;
+        border: none;
+        width: 50%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        border-radius: 0;
+        color: #0a1d3f;
+      }
+
+      .nav__responsive .nav_do_cliente:hover {
+        color: #c2c2c2;
+        transition: .2s;
       }
       
       /* beneficios */
@@ -1788,13 +1829,8 @@
 
       /* Footer */
       
-      .footer__rodape {
-        flex-direction: column;
-        gap: 20px;
-        padding: 40px;
-        text-align: center;
-        height: max-content;
-      }
+     
+      
     }
 
     @media screen and (max-width: 650px) {
@@ -2036,8 +2072,8 @@
       </div>
 
       <div class="nav__cadastrar">
-        <a href="" class="nav__link">Cadastrar-se</a>
-        <button class="button__blue">Entrar</button>
+        <a href="#" class="nav__link nav_do_parceiro">Área do Parceiro</a>
+        <button class="button__blue nav_do_cliente">Área do Cliente</button>
       </div>
     </nav>
   </header>
